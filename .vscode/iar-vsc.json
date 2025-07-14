@@ -1,0 +1,18 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\EXPO_GD_Car\\HSP.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\EXPO_GD_Car\\HSP.eww": {
+      "configs": {
+        "${workspaceFolder}\\EXPO_GD_Car\\HSP.ewp": "Debug"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\EXPO_GD_Car\\HSP.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "C:\\iar\\ewarm-9.60.3"
+  }
+}
