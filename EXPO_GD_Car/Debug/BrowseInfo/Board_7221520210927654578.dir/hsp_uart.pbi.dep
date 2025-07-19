@@ -1,0 +1,53 @@
+D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\Debug\BrowseInfo\Board_7221520210927654578.dir\hsp_uart.pbi: \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\ -\ 6050\EXPO_GD_Car\Board\hsp_uart.c \
+  C:\iar\ewarm-9.60.3\arm\inc\c\string.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\ycheck.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\yvals.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\DLib_Defaults.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\DLib_Config_Full.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\ysizet.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product_string.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\ -\ 6050\EXPO_GD_Car\Board\hsp_uart.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\CMSIS\core_cm4.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\stdint.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\CMSIS\core_cmInstr.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\aarch32\cmsis_iar.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\aarch32\iccarm_builtin.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\CMSIS\core_cmFunc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\CMSIS\core_cm4_simd.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\CMSIS\GD\GD32F4xx\Include\system_gd32f4xx.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\Main\gd32f4xx_libopt.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_rcu.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_adc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_can.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_crc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_ctc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_dac.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_dbg.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_dci.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_dma.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_exti.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_fmc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_fwdgt.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_gpio.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_syscfg.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_i2c.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_iref.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_pmu.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\stdlib.h \
+  C:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product_stdlib.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h \
+  D:\Documents\nuedc\EXPO_GD_Car\ (1)\ -\ 6050\EXPO_GD_Car\Board\hsp_gpio.h
