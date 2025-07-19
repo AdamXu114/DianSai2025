@@ -1,0 +1,88 @@
+E:\DIanSai\HSPv2_HC04\ -\ 副本\Debug\BrowseInfo\Main_13238667732884069010.dir\main.pbi: \
+  E:\DIanSai\HSPv2_HC04\ -\ 鍓湰\Main\hsp_liball.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Main\systick.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\stdio.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\ycheck.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\yvals.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\DLib_Defaults.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\DLib_Config_Full.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\ysizet.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\stdint.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\LowLevelIOInterface.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\CMSIS\core_cm4.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\CMSIS\core_cmInstr.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\aarch32\cmsis_iar.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\aarch32\iccarm_builtin.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\CMSIS\core_cmFunc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\CMSIS\core_cm4_simd.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\CMSIS\GD\GD32F4xx\Include\system_gd32f4xx.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Main\gd32f4xx_libopt.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_rcu.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_adc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_can.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_crc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_ctc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_dac.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_dbg.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_dci.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_dma.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_exti.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_fmc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_fwdgt.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_gpio.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_syscfg.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_i2c.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_iref.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_pmu.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\stdlib.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product_stdlib.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_SDCARD.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_dci.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_gpio.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_i2c.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_timer.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_spi.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_uart.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_adc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_MMA8451.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\GFX_FUNCTIONS.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\string.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product_string.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\00_MENU.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_TFT18.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex1.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex2.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_CAT9555.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex3.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex4.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex5.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_COMM.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex6.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_MOTOR.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex7.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_MT9V034.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Ex8.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Board\hsp_rtc.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Lab1.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Lab2.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Lab3.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\Utilities\HSP_TSL1401.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Lab4.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 副本\App\Project1.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\math.h \
+  E:\iar\ewarm-9.60.3\arm\inc\c\DLib_float_setup.h \
+  E:\DIanSai\HSPv2_HC04\ -\ 鍓湰\Main\main.c
