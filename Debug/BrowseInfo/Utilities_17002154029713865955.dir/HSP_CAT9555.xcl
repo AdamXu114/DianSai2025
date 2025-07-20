@@ -1,33 +1,33 @@
-"D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Utilities\HSP_CAT9555.c"
+"D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Utilities\HSP_CAT9555.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\BrowseInfo\Utilities_17002154029713865955.dir\HSP_CAT9555.pbi.dep
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Debug\BrowseInfo\Utilities_17002154029713865955.dir\HSP_CAT9555.pbi.dep
 -o
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\BrowseInfo\Utilities_17002154029713865955.dir\HSP_CAT9555.pbi
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Debug\BrowseInfo\Utilities_17002154029713865955.dir\HSP_CAT9555.pbi
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Utilities
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Utilities
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Main\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Main\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Board\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Board\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\CMSIS\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\CMSIS\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\CMSIS\GD\GD32F4xx\Include\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\CMSIS\GD\GD32F4xx\Include\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\GD32F4xx_standard_peripheral\Include\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\GD32F4xx_standard_peripheral\Include\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Main\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Main\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Utilities\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Utilities\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\App\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\App\
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\FatFS\
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\FatFS\
 -I
 D:\iar\ewarm-9.60.3\arm\CMSIS\Core\Include
 -I
@@ -37,23 +37,23 @@ D:\iar\ewarm-9.60.3\arm\inc
 -I
 D:\iar\ewarm-9.60.3\arm\inc\c
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Main
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Main
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Board
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Board
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\CMSIS
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\CMSIS
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\CMSIS\GD\GD32F4xx\Include
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\CMSIS\GD\GD32F4xx\Include
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\GD32F4xx_standard_peripheral\Include
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\GD32F4xx_standard_peripheral\Include
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Main
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Main
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Utilities
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Utilities
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\App
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\App
 -I
-D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\FatFS
+D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\FatFS
 -I
 D:\iar\ewarm-9.60.3\arm\CMSIS\Core\Include
 -D__CHAR_BITS__=8

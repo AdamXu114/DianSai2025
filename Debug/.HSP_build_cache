@@ -3,9 +3,33 @@
     <Tool>
         <Name>linker</Name>
         <Parent>
-            <Path>E:\DIanSai\HSPv2_HC04 - 副本\Debug\Exe\HSP.out</Path>
+            <Path>D:\IAR.work\HSPv2_CORE\Debug\Exe\HSP.out</Path>
             <Output>
-                <Path>E:\DIanSai\HSPv2_HC04 - 副本\Debug\List\HSP.map</Path>
+                <Path>D:\IAR.work\HSPv2_CORE\Debug\List\HSP.map</Path>
+            </Output>
+        </Parent>
+        <Parent>
+            <Path>D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Debug\Exe\HSP.out</Path>
+            <Output>
+                <Path>D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\Debug\List\HSP.map</Path>
+            </Output>
+        </Parent>
+        <Parent>
+            <Path>E:\DIanSai\pk\HSPv2_HC04 - straight\Debug\Exe\HSP.out</Path>
+            <Output>
+                <Path>E:\DIanSai\pk\HSPv2_HC04 - straight\Debug\List\HSP.map</Path>
+            </Output>
+        </Parent>
+        <Parent>
+            <Path>E:\DIanSai\HSPv2_HC04\Debug\Exe\HSP.out</Path>
+            <Output>
+                <Path>E:\DIanSai\HSPv2_HC04\Debug\List\HSP.map</Path>
+            </Output>
+        </Parent>
+        <Parent>
+            <Path>D:\IAR.work\EXPO_IAR_Core\Debug\Exe\HSP.out</Path>
+            <Output>
+                <Path>D:\IAR.work\EXPO_IAR_Core\Debug\List\HSP.map</Path>
             </Output>
         </Parent>
         <Parent>
@@ -21,33 +45,15 @@
             </Output>
         </Parent>
         <Parent>
-            <Path>D:\IAR.work\EXPO_IAR_Core\Debug\Exe\HSP.out</Path>
+            <Path>E:\DIanSai\HSPv2_HC04 - 副本\Debug\Exe\HSP.out</Path>
             <Output>
-                <Path>D:\IAR.work\EXPO_IAR_Core\Debug\List\HSP.map</Path>
-            </Output>
-        </Parent>
-        <Parent>
-            <Path>D:\IAR.work\HSPv2_CORE\Debug\Exe\HSP.out</Path>
-            <Output>
-                <Path>D:\IAR.work\HSPv2_CORE\Debug\List\HSP.map</Path>
+                <Path>E:\DIanSai\HSPv2_HC04 - 副本\Debug\List\HSP.map</Path>
             </Output>
         </Parent>
         <Parent>
             <Path>D:\IAR.work\EXPO_GD_Core\Debug\Exe\HSP.out</Path>
             <Output>
                 <Path>D:\IAR.work\EXPO_GD_Core\Debug\List\HSP.map</Path>
-            </Output>
-        </Parent>
-        <Parent>
-            <Path>E:\DIanSai\HSPv2_HC04\Debug\Exe\HSP.out</Path>
-            <Output>
-                <Path>E:\DIanSai\HSPv2_HC04\Debug\List\HSP.map</Path>
-            </Output>
-        </Parent>
-        <Parent>
-            <Path>E:\DIanSai\pk\HSPv2_HC04 - straight\Debug\Exe\HSP.out</Path>
-            <Output>
-                <Path>E:\DIanSai\pk\HSPv2_HC04 - straight\Debug\List\HSP.map</Path>
             </Output>
         </Parent>
     </Tool>

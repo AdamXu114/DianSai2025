@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\settings\HSP.Debug.general.xcl" --backend -f "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\settings\HSP.Debug.driver.xcl" 
+"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\settings\HSP.Debug.general.xcl" --backend -f "D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\settings\HSP.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\settings\HSP.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\settings\HSP.Debug.driver.xcl" 
+"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\settings\HSP.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Study_resources\电赛\pk\HSPv2_HC04 - straight\settings\HSP.Debug.driver.xcl" 
 
 @echo off 
 :end

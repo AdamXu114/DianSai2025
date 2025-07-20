@@ -47,6 +47,7 @@ float yaw = 0.0f;
 float yaw_ref;
 // 三次采集总时长约 3 × 66.7 ms = 200 ms
 uint32_t dt = 200;
+uint8_t flag_20_ms = 0; // 用于标记 20 ms 周期
 char buf[32];
 
 
@@ -178,57 +179,55 @@ int main(void)
    while (1) {
         /* 1. 采样并更新 yaw */
         float tmp = 0.0f;
-        uint32_t start_time = get_systick_counter();
-        for (int i = 0; i < 3; i++) {
-            short gyro[3];
-            MPU6050_ReadGyro(gyro);
-            int16_t gz = gyro[2];
-            uint32_t Current_time = get_systick_counter();
-            dt = Current_time - start_time;
-            tmp += (gz / 131.0f) * dt / 20.0f / 81.0f * 90.0f / 91.5f * 90.0f;
-            start_time = Current_time;
-            delay_1ms(5);
+        if(flag_20_ms) {
+            flag_20_ms = 0; // 清除标志
+            for (int i = 0; i < 3; i++) {
+                short gyro[3];
+                MPU6050_ReadGyro(gyro);
+                int16_t gz = gyro[2];
+                tmp += (gz / 131.0f) ;
+            }
         }
-        yaw += tmp / 3.0f;
+        yaw += tmp / 3.0f * 0.020f / 9.5f *90.0f ; // 20 ms, 3 次采样
         yaw = normalize_angle(yaw);
 
 
-        // /* 2. 检测是否要进入 90° 转向 */
-        // if (!turning && flagg == 1) {
-        //     turning = 1;
-        //     /* 设定目标角 = 当前参考 + 90° */
-        //     yaw_target = normalize_angle(yaw_ref + 90.0f);
-        // }
+        /* 2. 检测是否要进入 90° 转向 */
+        if (!turning && flagg == 1) {
+            turning = 1;
+            /* 设定目标角 = 当前参考 + 90° */
+            yaw_target = normalize_angle(yaw_ref + 90.0f);
+        }
 
-        // if (turning) {
-        //     /* 3. 转向模式：打死方向舵机，不前进 */
-        //     /* 这里我们让舵机偏到最大以最快速转向 */
-        //     hsp_servo_angle(SERVO3, SERVO_NEUTRAL + SERVO_MAX_DELTA);
-        //     hsp_motor_voltage(MOTORF, 30);
+        if (turning) {
+            /* 3. 转向模式：打死方向舵机，不前进 */
+            /* 这里我们让舵机偏到最大以最快速转向 */
+            hsp_servo_angle(SERVO3, SERVO_NEUTRAL + SERVO_MAX_DELTA);
+            hsp_motor_voltage(MOTORF, 30);
 
-        //     /* 4. 检查是否到位 */
-        //     float err_turn = normalize_angle(yaw - yaw_target);
-        //     if (fabsf(err_turn) < turn_tol) {
-        //         /* 转向完成 */
-        //         turning = 0;
-        //         flagg = 0;               // 清除外部触发
-        //         yaw_ref = yaw_target;   // 更新新的直行参考
-        //         /* 重置舵机到中立 */
-        //         hsp_servo_angle(SERVO3, SERVO_NEUTRAL);
-        //     }
-        // }
-        // else {
-        //     /* 5. 普通直行闭环 */
-        //     float err = normalize_angle(yaw - yaw_ref);
-        //     drive_straight_with_servo(err);
-        // }
+            /* 4. 检查是否到位 */
+            float err_turn = normalize_angle(yaw - yaw_target);
+            if (fabsf(err_turn) < turn_tol) {
+                /* 转向完成 */
+                turning = 0;
+                flagg = 0;               // 清除外部触发
+                yaw_ref = yaw_target;   // 更新新的直行参考
+                /* 重置舵机到中立 */
+                hsp_servo_angle(SERVO3, SERVO_NEUTRAL);
+            }
+        }
+        else {
+            /* 5. 普通直行闭环 */
+            float err = normalize_angle(yaw - yaw_ref);
+            drive_straight_with_servo(err);
+        }
 
         /* 6. 显示 */
         sprintf(buf, "Yaw:%6.1f", yaw);
         hsp_tft18_show_str(0, 0, buf);
         sprintf(buf, "Ref:%6.1f", yaw_ref);
         hsp_tft18_show_str(0, 1, buf);
-        sprintf(buf, "RES:%3d", dt);
+        sprintf(buf, "dt:%3d", dt);
         hsp_tft18_show_str(0, 3, buf);
         if (turning) {
             sprintf(buf, "Turn->%6.1f", yaw_target);

@@ -43,6 +43,7 @@ extern uint8_t rx_buffer[] ;
 extern uint16_t rx_idx, tx_idx;
 uint32_t encoder_pulse;
 uint32_t encoder_pulse_t;
+extern uint8_t flag_20_ms;
 
 /*!
     \brief      this function handles NMI exception
@@ -153,6 +154,7 @@ void SysTick_Handler(void)
         encoder_pulse = timer_counter_read(TIMER3);
         encoder_speed = encoder_pulse - 5000;
 		timer_counter_value_config(TIMER3, 5000);
+        flag_20_ms = 1;
     }
 }
 uint32_t get_systick_counter(void)

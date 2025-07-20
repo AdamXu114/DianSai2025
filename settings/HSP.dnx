@@ -21,18 +21,18 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <Jet>
+        <JetConnSerialNo>CMSIS-DAP v2:00000080066FFF544884654867150934A5A5A5A597969908</JetConnSerialNo>
+        <JetConnFoundProbes>CMSIS-DAP v1:00000080066fff544884654867150934a5a5a5a597969908:CMSIS-DAP v2:00000080066FFF544884654867150934A5A5A5A597969908:</JetConnFoundProbes>
+        <PrevWtdReset>Software</PrevWtdReset>
         <DisableInterrupts>0</DisableInterrupts>
         <LeaveRunning>1</LeaveRunning>
         <MultiCoreRunAll>0</MultiCoreRunAll>
         <CpuHaltOnBreakpointSet>0</CpuHaltOnBreakpointSet>
         <OnlineReset>Software</OnlineReset>
-        <JetConnSerialNo>CMSIS-DAP v2:00000080066FFF544884654867150934A5A5A5A597969908</JetConnSerialNo>
-        <JetConnFoundProbes>CMSIS-DAP v1:00000080066fff544884654867150934a5a5a5a597969908:CMSIS-DAP v2:00000080066FFF544884654867150934A5A5A5A597969908:</JetConnFoundProbes>
-        <PrevWtdReset>Software</PrevWtdReset>
     </Jet>
     <PlDriver>
-        <MemConfigValue>D:\iar\ewarm-9.60.3\arm\config\debugger\GD\GD32F470xG.ddf</MemConfigValue>
         <FirstRun>0</FirstRun>
+        <MemConfigValue>D:\iar\ewarm-9.60.3\arm\config\debugger\GD\GD32F470xG.ddf</MemConfigValue>
     </PlDriver>
     <SWOManager>
         <SamplingDivider>8192</SamplingDivider>
@@ -52,7 +52,7 @@
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <DebugChecksum>
-        <Checksum>654510190</Checksum>
+        <Checksum>261544536</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
