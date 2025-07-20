@@ -1,0 +1,18 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\HSP.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\HSP.eww": {
+      "configs": {
+        "${workspaceFolder}\\HSP.ewp": "Debug"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\HSP.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "D:\\iar\\ewarm-9.60.3"
+  }
+}

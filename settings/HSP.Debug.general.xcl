@@ -1,0 +1,15 @@
+D:\iar\ewarm-9.60.3\arm\bin\armPROC.dll
+
+ D:\iar\ewarm-9.60.3\arm\bin\armJET.dll
+
+ "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Exe\HSP.out"
+
+ --plugin=D:\iar\ewarm-9.60.3\arm\bin\armLibSupportUniversal.dll
+
+ --device_macro=D:\iar\ewarm-9.60.3\arm/config/debugger/GD/GD32F4xx.dmac
+
+ --flash_loader=D:\iar\ewarm-9.60.3\arm/config/flashloader/GD/FlashGD32F470xG.board
+
+ 
+
+

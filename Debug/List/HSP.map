@@ -1,0 +1,1055 @@
+###############################################################################
+#
+# IAR ELF Linker V9.60.3.422/W64 for ARM                  20/Jul/2025  15:28:33
+# Copyright 2007-2024 IAR Systems AB.
+#
+#    Output file  =
+#        D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Exe\HSP.out
+#    Map file     =
+#        D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\List\HSP.map
+#    Command line =
+#        -f "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Exe\HSP.out.rsp"
+#        ("D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\00_MENU.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\FatFS_2687367267609184630.dir\diskio.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex1_gpio.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex2_I2c.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex3_tft18.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex4_adc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex5_uart.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex6_pwm.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex7_dci.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Ex8_rtc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\FatFS_2687367267609184630.dir\ff.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\FatFS_2687367267609184630.dir\ffunicode.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_adc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_can.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_crc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_ctc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_dac.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_dbg.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_dci.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_dma.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_enet.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_exmc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_exti.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_fmc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_fwdgt.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_gpio.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_i2c.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_ipa.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_iref.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Main_13238667732884069010.dir\gd32f4xx_it.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_misc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_pmu.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_rcu.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_rtc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_sdio.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_spi.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_syscfg.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_timer.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_tli.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_trng.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_usart.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir\gd32f4xx_wwdgt.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\GFX_FUNCTIONS.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_adc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_CAT9555.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_COMM.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_dci.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_ENCODER.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_GD25Q64.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_gpio.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_i2c.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_MMA8451.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_MOTOR.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_MT9V034.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_rtc.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_SDCARD.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_spi.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_TFT18.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_timer.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_TSL1401.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Board_7221520210927654578.dir\hsp_uart.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Utilities_17002154029713865955.dir\HSP_WRITE.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Lab1_hmi.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Lab2_sensor.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Lab3_ccd.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Lab4_motor.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Main_13238667732884069010.dir\main.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\App_2489385672134236918.dir\Project1_LineFollower.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Startup_17868067532763321386.dir\startup_gd32f450_470.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\CMSIS_13545061835669826545.dir\system_gd32f4xx.o"
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Obj\Main_13238667732884069010.dir\systick.o" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --no_out_extension -o "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04
+#        - straight\Debug\Exe\HSP.out" --map
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\List\HSP.map" --config
+#        D:\iar\ewarm-9.60.3\arm/config/linker/GD/GD32F470xG.icf --semihosting
+#        --entry __iar_program_start --redirect __write=__write_buffered --vfe
+#        --text_out locale --cpu=Cortex-M4 --fpu=VFPv4_sp) --dependencies=n
+#        "D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 -
+#        straight\Debug\Exe\HSP.out.iar_deps"
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x80f'ffff] { ro };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2006'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  section .sram  in "P3"
+
+
+  Section            Kind         Address  Alignment    Size  Object
+  -------            ----         -------  ---------    ----  ------
+"A0":                                                  0x1ac
+  .intvec            ro code   0x800'0000          4   0x1ac  startup_gd32f450_470.o [7]
+                             - 0x800'01ac              0x1ac
+
+"P1":                                                 0x739b
+  .text              ro code   0x800'01ac          4   0xece  xprintffull_nomb.o [9]
+  .text              ro code   0x800'107a          2    0x7e  lz77_init_single.o [11]
+  .text              ro code   0x800'10f8          4    0x16  strchr.o [11]
+  .text              ro code   0x800'110e          2     0xa  xsprout.o [9]
+  .text              ro code   0x800'1118          4    0x40  xfail_s.o [9]
+  .text              ro code   0x800'1158          4    0x36  strlen.o [11]
+  .rodata            const     0x800'118e          2     0x2  xlocale_c.o [9]
+  .text              ro code   0x800'1190          4    0x58  memchr.o [11]
+  .text              ro code   0x800'11e8          4    0xa6  ABImemcpy.o [11]
+  .rodata            const     0x800'128e                0x1  xlocale_c.o [9]
+  .text              ro code   0x800'1290          4    0x70  frexp.o [10]
+  .text              ro code   0x800'1300          4    0x34  DblCmpLe.o [10]
+  .text              ro code   0x800'1334          4    0x34  DblCmpGe.o [10]
+  .text              ro code   0x800'1368          4   0x13a  ldexp.o [10]
+  .text              ro code   0x800'14a4          4    0x36  DblToS32.o [10]
+  .text              ro code   0x800'14dc          4    0x22  S32ToDbl.o [10]
+  .text              ro code   0x800'1500          4   0x25e  DblAddSub.o [10]
+  .text              ro code   0x800'1760          4   0x246  DblDiv.o [10]
+  .text              ro code   0x800'19a8          4    0x22  DblToU32.o [10]
+  .text              ro code   0x800'19cc          4    0x1c  U32ToDbl.o [10]
+  .text              ro code   0x800'19e8          4   0x1aa  DblMul.o [10]
+  .text              ro code   0x800'1b94          4     0x8  xlocale_c.o [9]
+  .text              ro code   0x800'1b9c          4   0x230  I64DivMod.o [11]
+  .text              ro code   0x800'1dcc          2     0x6  abort.o [9]
+  .text              ro code   0x800'1dd4          4     0x2  I64DivZer.o [11]
+  .text              ro code   0x800'1dd8          4    0x14  exit.o [12]
+  .text              ro code   0x800'1dec          4   0xb42  gd32f4xx_timer.o [5]
+  .text              ro code   0x800'2930          4   0x1bc  gd32f4xx_rcu.o [5]
+  .text              ro code   0x800'2aec          4   0x864  HSP_MT9V034.o [8]
+  .text              ro code   0x800'3350          4    0xf0  hsp_spi.o [2]
+  .text              ro code   0x800'3440          4   0x384  HSP_TFT18.o [8]
+  .text              ro code   0x800'37c4          4   0x47a  hsp_i2c.o [2]
+  .text              ro code   0x800'3c40          4    0xb8  systick.o [6]
+  .text              ro code   0x800'3cf8          4   0x2a0  hsp_dci.o [2]
+  .text              ro code   0x800'3f98          4    0x68  DblToFlt.o [10]
+  .text              ro code   0x800'4000          4   0x174  gd32f4xx_gpio.o [5]
+  .text              ro code   0x800'4174          4    0x6a  gd32f4xx_spi.o [5]
+  .text              ro code   0x800'41e0          4   0x640  gd32f4xx_dma.o [5]
+  .text              ro code   0x800'4820          4   0x288  gd32f4xx_i2c.o [5]
+  .text              ro code   0x800'4aa8          4    0x4c  gd32f4xx_dci.o [5]
+  .text              ro code   0x800'4af4          4    0xe4  gd32f4xx_misc.o [5]
+  .text              ro code   0x800'4bd8          4   0x678  HSP_MMA8451.o [8]
+  .text              ro code   0x800'5250          4    0x28  printf.o [9]
+  .rodata            const     0x800'5278          4   0x5f0  HSP_TFT18.o [8]
+  .text              ro code   0x800'5868          4   0x3da  gd32f4xx_usart.o [5]
+  .text              ro code   0x800'5c44          4   0x3cc  hsp_timer.o [2]
+  .text              ro code   0x800'6010          4   0x398  hsp_uart.o [2]
+  .text              ro code   0x800'63a8          4   0x318  gd32f4xx_adc.o [5]
+  .text              ro code   0x800'66c0          4   0x2a8  main.o [6]
+  .text              ro code   0x800'6968          4   0x19c  hsp_gpio.o [2]
+  .text              ro code   0x800'6b04          4    0x34  HSP_CAT9555.o [8]
+  .text              ro code   0x800'6b38          4    0xf0  hsp_adc.o [2]
+  .text              ro code   0x800'6c28          4    0xde  HSP_MOTOR.o [8]
+  .text              ro code   0x800'6d08          4   0x128  gd32f4xx_it.o [6]
+  .text              ro code   0x800'6e30          4    0x48  FltToDbl.o [10]
+  .text              ro code   0x800'6e78          4    0x40  sprintf.o [9]
+  .text              ro code   0x800'6eb8          4    0x20  gd32f4xx_exti.o [5]
+  .text              ro code   0x800'6ed8          4   0x164  system_gd32f4xx.o [3]
+  .text              ro code   0x800'703c          4    0xbc  xxwritebuffered.o [9]
+  .text              ro code   0x800'70f8          4    0x3c  HSP_WRITE.o [8]
+  .text              ro code   0x800'7134          4    0x44  putchar.o [9]
+  .text              ro code   0x800'7178          4    0x40  xcloseall.o [9]
+  .text              ro code   0x800'71b8          2    0x38  zero_init3.o [11]
+  .text              ro code   0x800'71f0          4    0x28  data_init.o [11]
+  .text              ro code   0x800'7218          4    0x22  fpinit_M.o [10]
+  .iar.init_table    const     0x800'723c          4    0x28  - Linker created -
+  .text              ro code   0x800'7264          4    0x1e  cmain.o [11]
+  .text              ro code   0x800'7282          2     0x4  low_level_init.o [9]
+  .text              ro code   0x800'7286          2     0x4  exit.o [9]
+  .text              ro code   0x800'728c          4     0xe  cexit.o [11]
+  .text              ro code   0x800'729c          4    0x1c  cstartup_M.o [11]
+  .rodata            const     0x800'72b8          4    0x18  HSP_MMA8451.o [8]
+  .rodata            const     0x800'72d0          4    0x18  HSP_MT9V034.o [8]
+  .text              ro code   0x800'72e8          2    0x16  xprout.o [9]
+  .rodata            const     0x800'7300          4    0x14  HSP_MT9V034.o [8]
+  .rodata            const     0x800'7314          4    0x10  gd32f4xx_rcu.o [5]
+  .rodata            const     0x800'7324          4    0x10  HSP_MT9V034.o [8]
+  .text              ro code   0x800'7334          4    0x10  startup_gd32f450_470.o [7]
+  .rodata            const     0x800'7344          4     0xc  main.o [6]
+  .rodata            const     0x800'7350          4     0xc  main.o [6]
+  .rodata            const     0x800'735c          4     0xc  main.o [6]
+  .rodata            const     0x800'7368          4     0x8  gd32f4xx_rcu.o [5]
+  .rodata            const     0x800'7370          4     0x8  gd32f4xx_rcu.o [5]
+  .rodata            const     0x800'7378          4     0x8  HSP_MT9V034.o [8]
+  .rodata            const     0x800'7380          4     0x8  main.o [6]
+  .text              ro code   0x800'7388          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'738c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7390          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7394          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7398          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'739c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73a0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73a4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73a8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73ac          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73b0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73b4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73b8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73bc          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73c0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73c4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73c8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73cc          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73d0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73d4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73d8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73dc          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73e0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73e4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73e8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73ec          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73f0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73f4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73f8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'73fc          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7400          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7404          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7408          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'740c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7410          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7414          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7418          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'741c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7420          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7424          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7428          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'742c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7430          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7434          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7438          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'743c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7440          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7444          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7448          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'744c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7450          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7454          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7458          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'745c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7460          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7464          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7468          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'746c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7470          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7474          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7478          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'747c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7480          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7484          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7488          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'748c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7490          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7494          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'7498          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'749c          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74a0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74a4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74a8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74ac          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74b0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74b4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74b8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74bc          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74c0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74c4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74c8          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74cc          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74d0          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74d4          2     0x4  startup_gd32f450_470.o [7]
+  .text              ro code   0x800'74d8          4     0x0  cstart_closeall.o [11]
+  .rodata            const     0x800'74d8                0x0  zero_init3.o [11]
+  .rodata            const     0x800'74d8                0x0  lz77_init_single.o [11]
+  Initializer bytes  const     0x800'74d8               0x6f  <for P2-1>
+                             - 0x800'7547             0x739b
+
+"P2", part 1 of 3:                                     0x139
+  P2-1                        0x2000'0000              0x139  <Init block>
+    .data            inited   0x2000'0000          4     0x4  main.o [6]
+    .data            inited   0x2000'0004          4     0x4  system_gd32f4xx.o [3]
+    .data            inited   0x2000'0008          4    0x38  xlocale_c.o [9]
+    .data            inited   0x2000'0040          4    0x48  xfiles.o [9]
+    .data            inited   0x2000'0088          4    0x48  xfiles.o [9]
+    .data            inited   0x2000'00d0          4    0x48  xfiles.o [9]
+    .data            inited   0x2000'0118          4    0x20  xfiles.o [9]
+    .data            inited   0x2000'0138                0x1  main.o [6]
+                            - 0x2000'0139              0x139
+
+"P2", part 2 of 3:                                    0x646c
+  .bss               zero     0x2000'013c          4  0x4600  Ex7_dci.o [1]
+  .bss               zero     0x2000'473c          4  0x1d60  Ex7_dci.o [1]
+  .bss               zero     0x2000'649c          4    0x54  xxwritebuffered.o [9]
+  .bss               zero     0x2000'64f0          4    0x50  xfiles.o [9]
+  .bss               zero     0x2000'6540          4    0x50  xfiles.o [9]
+  .bss               zero     0x2000'6590          4     0x4  gd32f4xx_it.o [6]
+  .bss               zero     0x2000'6594          4     0x4  main.o [6]
+  .bss               zero     0x2000'6598          4     0x4  systick.o [6]
+  .bss               zero     0x2000'659c          4     0x4  xfail_s.o [9]
+  .bss               zero     0x2000'65a0          2     0x2  hsp_timer.o [2]
+  .bss               zero     0x2000'65a2          2     0x2  main.o [6]
+  .bss               zero     0x2000'65a4          2     0x2  main.o [6]
+  .bss               zero     0x2000'65a6                0x1  Ex7_dci.o [1]
+  .bss               zero     0x2000'65a7                0x1  Ex7_dci.o [1]
+                            - 0x2000'65a8             0x646c
+
+"P2", part 3 of 3:                                    0x2000
+  CSTACK                      0x2000'65a8          8  0x2000  <Block>
+    CSTACK           uninit   0x2000'65a8             0x2000  <Block tail>
+                            - 0x2000'85a8             0x2000
+
+Absolute sections:                                    0x5820
+  .bss               zero     0x2003'0000             0x5820  main.o [6]
+                            - 0x2003'5820             0x5820
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'7547   0x80f'ffff  0xf'8ab9
+  0x2000'0139  0x2000'013b       0x3
+  0x2000'85a8  0x2002'ffff  0x2'7a58
+  0x2003'5820  0x2006'ffff  0x3'a7e0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    2 destination ranges, total size 0xbc8c:
+          0x2000'013c  0x646c
+          0x2003'0000  0x5820
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0x6f (35% of destination):
+           0x800'74d8    0x6f
+    1 destination range, total size 0x139:
+          0x2000'0000   0x139
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data  rw data
+                                                        (abs)
+    ------                  -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------------
+    Total:
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\App_2489385672134236918.dir: [1]
+    Ex7_dci.o                                  25'442
+    ----------------------------------------------------------
+    Total:                                     25'442
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Board_7221520210927654578.dir: [2]
+    hsp_adc.o                   240
+    hsp_dci.o                   672
+    hsp_gpio.o                  412
+    hsp_i2c.o                 1'146
+    hsp_spi.o                   240
+    hsp_timer.o                 972                 2
+    hsp_uart.o                  920
+    ----------------------------------------------------------
+    Total:                    4'602                 2
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\CMSIS_13545061835669826545.dir: [3]
+    system_gd32f4xx.o           356        1        4
+    ----------------------------------------------------------
+    Total:                      356        1        4
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\FatFS_2687367267609184630.dir: [4]
+    ----------------------------------------------------------
+    Total:
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir: [5]
+    gd32f4xx_adc.o              792
+    gd32f4xx_dci.o               76
+    gd32f4xx_dma.o            1'600
+    gd32f4xx_exti.o              32
+    gd32f4xx_gpio.o             372
+    gd32f4xx_i2c.o              648
+    gd32f4xx_misc.o             228
+    gd32f4xx_rcu.o              444       32
+    gd32f4xx_spi.o              106
+    gd32f4xx_timer.o          2'882
+    gd32f4xx_usart.o            986
+    ----------------------------------------------------------
+    Total:                    8'166       32
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Main_13238667732884069010.dir: [6]
+    gd32f4xx_it.o               296                 4
+    main.o                      680       46       13   22'560
+    systick.o                   184                 4
+    ----------------------------------------------------------
+    Total:                    1'160       46       21   22'560
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Startup_17868067532763321386.dir: [7]
+    startup_gd32f450_470.o      780
+    ----------------------------------------------------------
+    Total:                      780
+
+D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Utilities_17002154029713865955.dir: [8]
+    HSP_CAT9555.o                52
+    HSP_MMA8451.o             1'656       24
+    HSP_MOTOR.o                 222
+    HSP_MT9V034.o             2'148       68
+    HSP_TFT18.o                 900    1'520
+    HSP_WRITE.o                  60
+    ----------------------------------------------------------
+    Total:                    5'038    1'612
+
+dl7M_tlf.a: [9]
+    abort.o                       6
+    exit.o                        4
+    low_level_init.o              4
+    printf.o                     40
+    putchar.o                    68
+    sprintf.o                    64
+    xcloseall.o                  64
+    xfail_s.o                    64                 4
+    xfiles.o                              88      408
+    xlocale_c.o                   8       23       56
+    xprintffull_nomb.o        3'790
+    xprout.o                     22
+    xsprout.o                    10
+    xxwritebuffered.o           188                84
+    ----------------------------------------------------------
+    Total:                    4'332      111      552
+
+m7M_tls.a: [10]
+    DblAddSub.o                 606
+    DblCmpGe.o                   52
+    DblCmpLe.o                   52
+    DblDiv.o                    582
+    DblMul.o                    426
+    DblToFlt.o                  104
+    DblToS32.o                   54
+    DblToU32.o                   34
+    FltToDbl.o                   72
+    S32ToDbl.o                   34
+    U32ToDbl.o                   28
+    fpinit_M.o                   34
+    frexp.o                     112
+    ldexp.o                     314
+    ----------------------------------------------------------
+    Total:                    2'504
+
+rt7M_tl.a: [11]
+    ABImemcpy.o                 166
+    I64DivMod.o                 560
+    I64DivZer.o                   2
+    cexit.o                      14
+    cmain.o                      30
+    cstart_closeall.o
+    cstartup_M.o                 28
+    data_init.o                  40
+    lz77_init_single.o          126
+    memchr.o                     88
+    strchr.o                     22
+    strlen.o                     54
+    zero_init3.o                 56
+    ----------------------------------------------------------
+    Total:                    1'186
+
+shb_l.a: [12]
+    exit.o                       20
+    ----------------------------------------------------------
+    Total:                       20
+
+    Gaps                         33        4
+    Linker created                        40    8'192
+--------------------------------------------------------------
+    Grand Total:             28'177    1'846   34'213   22'560
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address    Size  Type      Object
+-----                       -------    ----  ----      ------
+.iar.init_table$$Base    0x800'723c           --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'7264           --   Gb  - Linker created -
+?main                    0x800'7265          Code  Gb  cmain.o [11]
+ADC_IRQHandler           0x800'73d1          Code  Wk  startup_gd32f450_470.o [7]
+BusFault_Handler         0x800'6d0f     0x2  Code  Gb  gd32f4xx_it.o [6]
+CAN0_EWMC_IRQHandler     0x800'73e1          Code  Wk  startup_gd32f450_470.o [7]
+CAN0_RX0_IRQHandler      0x800'73d9          Code  Wk  startup_gd32f450_470.o [7]
+CAN0_RX1_IRQHandler      0x800'73dd          Code  Wk  startup_gd32f450_470.o [7]
+CAN0_TX_IRQHandler       0x800'73d5          Code  Wk  startup_gd32f450_470.o [7]
+CAN1_EWMC_IRQHandler     0x800'7485          Code  Wk  startup_gd32f450_470.o [7]
+CAN1_RX0_IRQHandler      0x800'747d          Code  Wk  startup_gd32f450_470.o [7]
+CAN1_RX1_IRQHandler      0x800'7481          Code  Wk  startup_gd32f450_470.o [7]
+CAN1_TX_IRQHandler       0x800'7479          Code  Wk  startup_gd32f450_470.o [7]
+CSTACK$$Base            0x2000'65a8           --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'85a8           --   Gb  - Linker created -
+DCI_IRQHandler           0x800'74ad          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel0_IRQHandler
+                         0x800'73b5          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel1_IRQHandler
+                         0x800'73b9          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel2_IRQHandler
+                         0x800'73bd          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel3_IRQHandler
+                         0x800'73c1          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel4_IRQHandler
+                         0x800'73c5          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel5_IRQHandler
+                         0x800'73c9          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel6_IRQHandler
+                         0x800'73cd          Code  Wk  startup_gd32f450_470.o [7]
+DMA0_Channel7_IRQHandler
+                         0x800'743d          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel0_IRQHandler
+                         0x800'745d          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel1_IRQHandler
+                         0x800'7461          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel2_IRQHandler
+                         0x800'7465          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel3_IRQHandler
+                         0x800'7469          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel4_IRQHandler
+                         0x800'746d          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel5_IRQHandler
+                         0x800'748d          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel6_IRQHandler
+                         0x800'7491          Code  Wk  startup_gd32f450_470.o [7]
+DMA1_Channel7_IRQHandler
+                         0x800'3e7f    0xf2  Code  Gb  hsp_dci.o [2]
+DebugMon_Handler         0x800'6d15     0x2  Code  Gb  gd32f4xx_it.o [6]
+ENET_IRQHandler          0x800'7471          Code  Wk  startup_gd32f450_470.o [7]
+ENET_WKUP_IRQHandler     0x800'7475          Code  Wk  startup_gd32f450_470.o [7]
+EXMC_IRQHandler          0x800'7441          Code  Wk  startup_gd32f450_470.o [7]
+EXTI0_IRQHandler         0x800'73a1          Code  Wk  startup_gd32f450_470.o [7]
+EXTI10_15_IRQHandler     0x800'6dc7    0x44  Code  Gb  gd32f4xx_it.o [6]
+EXTI1_IRQHandler         0x800'73a5          Code  Wk  startup_gd32f450_470.o [7]
+EXTI2_IRQHandler         0x800'73a9          Code  Wk  startup_gd32f450_470.o [7]
+EXTI3_IRQHandler         0x800'73ad          Code  Wk  startup_gd32f450_470.o [7]
+EXTI4_IRQHandler         0x800'73b1          Code  Wk  startup_gd32f450_470.o [7]
+EXTI5_9_IRQHandler       0x800'73e5          Code  Wk  startup_gd32f450_470.o [7]
+FMC_IRQHandler           0x800'7399          Code  Wk  startup_gd32f450_470.o [7]
+FPU_IRQHandler           0x800'74b5          Code  Wk  startup_gd32f450_470.o [7]
+HardFault_Handler        0x800'6d0b     0x2  Code  Gb  gd32f4xx_it.o [6]
+I2C0_ER_IRQHandler       0x800'7409          Code  Wk  startup_gd32f450_470.o [7]
+I2C0_EV_IRQHandler       0x800'7405          Code  Wk  startup_gd32f450_470.o [7]
+I2C1_ER_IRQHandler       0x800'7411          Code  Wk  startup_gd32f450_470.o [7]
+I2C1_EV_IRQHandler       0x800'740d          Code  Wk  startup_gd32f450_470.o [7]
+I2C2_ER_IRQHandler       0x800'7499          Code  Wk  startup_gd32f450_470.o [7]
+I2C2_EV_IRQHandler       0x800'7495          Code  Wk  startup_gd32f450_470.o [7]
+IPA_IRQHandler           0x800'74d5          Code  Wk  startup_gd32f450_470.o [7]
+LVD_IRQHandler           0x800'738d          Code  Wk  startup_gd32f450_470.o [7]
+MPU6050_Init             0x800'51bf    0x34  Code  Gb  HSP_MMA8451.o [8]
+MPU6050_ReadData         0x800'51a3    0x1c  Code  Gb  HSP_MMA8451.o [8]
+MPU6050_ReadGyro         0x800'51ff    0x38  Code  Gb  HSP_MMA8451.o [8]
+MPU6050_WriteReg         0x800'518f    0x14  Code  Gb  HSP_MMA8451.o [8]
+MemManage_Handler        0x800'6d0d     0x2  Code  Gb  gd32f4xx_it.o [6]
+NMI_Handler              0x800'6d09     0x2  Code  Gb  gd32f4xx_it.o [6]
+NVIC_SetPriority         0x800'3c41    0x2c  Code  Lc  systick.o [6]
+PendSV_Handler           0x800'6d17     0x2  Code  Gb  gd32f4xx_it.o [6]
+RCU_CTC_IRQHandler       0x800'739d          Code  Wk  startup_gd32f450_470.o [7]
+RES_value               0x2000'65a2     0x2  Data  Gb  main.o [6]
+RTC_Alarm_IRQHandler     0x800'7425          Code  Wk  startup_gd32f450_470.o [7]
+RTC_WKUP_IRQHandler      0x800'7395          Code  Wk  startup_gd32f450_470.o [7]
+Region$$Table$$Base      0x800'723c           --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'7264           --   Gb  - Linker created -
+Reset_Handler            0x800'7335          Code  Wk  startup_gd32f450_470.o [7]
+SDIO_IRQHandler          0x800'7445          Code  Wk  startup_gd32f450_470.o [7]
+SPI0_IRQHandler          0x800'7415          Code  Wk  startup_gd32f450_470.o [7]
+SPI1_IRQHandler          0x800'7419          Code  Wk  startup_gd32f450_470.o [7]
+SPI2_IRQHandler          0x800'744d          Code  Wk  startup_gd32f450_470.o [7]
+SPI3_IRQHandler          0x800'74c1          Code  Wk  startup_gd32f450_470.o [7]
+SPI4_IRQHandler          0x800'74c5          Code  Wk  startup_gd32f450_470.o [7]
+SPI5_IRQHandler          0x800'74c9          Code  Wk  startup_gd32f450_470.o [7]
+SVC_Handler              0x800'6d13     0x2  Code  Gb  gd32f4xx_it.o [6]
+Sensors_I2C_ReadRegister
+                         0x800'50f7    0x98  Code  Gb  HSP_MMA8451.o [8]
+Sensors_I2C_WriteRegister
+                         0x800'5083    0x74  Code  Gb  HSP_MMA8451.o [8]
+SysTick_Config           0x800'3c6d    0x30  Code  Lc  systick.o [6]
+SysTick_Handler          0x800'6d19    0x44  Code  Gb  gd32f4xx_it.o [6]
+SystemCoreClock         0x2000'0004     0x4  Data  Gb  system_gd32f4xx.o [3]
+SystemInit               0x800'6ed9    0x88  Code  Gb  system_gd32f4xx.o [3]
+TAMPER_STAMP_IRQHandler
+                         0x800'7391          Code  Wk  startup_gd32f450_470.o [7]
+TIMER0_BRK_TIMER8_IRQHandler
+                         0x800'73e9          Code  Wk  startup_gd32f450_470.o [7]
+TIMER0_Channel_IRQHandler
+                         0x800'73f5          Code  Wk  startup_gd32f450_470.o [7]
+TIMER0_TRG_CMT_TIMER10_IRQHandler
+                         0x800'73f1          Code  Wk  startup_gd32f450_470.o [7]
+TIMER0_UP_TIMER9_IRQHandler
+                         0x800'73ed          Code  Wk  startup_gd32f450_470.o [7]
+TIMER1_IRQHandler        0x800'73f9          Code  Wk  startup_gd32f450_470.o [7]
+TIMER2_IRQHandler        0x800'73fd          Code  Wk  startup_gd32f450_470.o [7]
+TIMER3_IRQHandler        0x800'7401          Code  Wk  startup_gd32f450_470.o [7]
+TIMER4_IRQHandler        0x800'7449          Code  Wk  startup_gd32f450_470.o [7]
+TIMER5_DAC_IRQHandler    0x800'7459          Code  Wk  startup_gd32f450_470.o [7]
+TIMER6_IRQHandler        0x800'5fbb    0x34  Code  Gb  hsp_timer.o [2]
+TIMER7_BRK_TIMER11_IRQHandler
+                         0x800'742d          Code  Wk  startup_gd32f450_470.o [7]
+TIMER7_Channel_IRQHandler
+                         0x800'7439          Code  Wk  startup_gd32f450_470.o [7]
+TIMER7_TRG_CMT_TIMER13_IRQHandler
+                         0x800'7435          Code  Wk  startup_gd32f450_470.o [7]
+TIMER7_UP_TIMER12_IRQHandler
+                         0x800'7431          Code  Wk  startup_gd32f450_470.o [7]
+TLI_ER_IRQHandler        0x800'74d1          Code  Wk  startup_gd32f450_470.o [7]
+TLI_IRQHandler           0x800'74cd          Code  Wk  startup_gd32f450_470.o [7]
+TRNG_IRQHandler          0x800'74b1          Code  Wk  startup_gd32f450_470.o [7]
+UART3_IRQHandler         0x800'7451          Code  Wk  startup_gd32f450_470.o [7]
+UART4_IRQHandler         0x800'7455          Code  Wk  startup_gd32f450_470.o [7]
+UART6_IRQHandler         0x800'74b9          Code  Wk  startup_gd32f450_470.o [7]
+UART7_IRQHandler         0x800'74bd          Code  Wk  startup_gd32f450_470.o [7]
+USART0_IRQHandler        0x800'741d          Code  Wk  startup_gd32f450_470.o [7]
+USART1_IRQHandler        0x800'7421          Code  Wk  startup_gd32f450_470.o [7]
+USART2_IRQHandler        0x800'6d63    0x32  Code  Gb  gd32f4xx_it.o [6]
+USART5_IRQHandler        0x800'6d95    0x32  Code  Gb  gd32f4xx_it.o [6]
+USBFS_IRQHandler         0x800'7489          Code  Wk  startup_gd32f450_470.o [7]
+USBFS_WKUP_IRQHandler    0x800'7429          Code  Wk  startup_gd32f450_470.o [7]
+USBHS_EP1_In_IRQHandler
+                         0x800'74a1          Code  Wk  startup_gd32f450_470.o [7]
+USBHS_EP1_Out_IRQHandler
+                         0x800'749d          Code  Wk  startup_gd32f450_470.o [7]
+USBHS_IRQHandler         0x800'74a9          Code  Wk  startup_gd32f450_470.o [7]
+USBHS_WKUP_IRQHandler    0x800'74a5          Code  Wk  startup_gd32f450_470.o [7]
+UsageFault_Handler       0x800'6d11     0x2  Code  Gb  gd32f4xx_it.o [6]
+WWDGT_IRQHandler         0x800'7389          Code  Wk  startup_gd32f450_470.o [7]
+_Close_all               0x800'7179    0x40  Code  Gb  xcloseall.o [9]
+_Files                  0x2000'0118    0x20  Data  Gb  xfiles.o [9]
+_LC                      0x800'01ad     0x6  Code  Lc  xprintffull_nomb.o [9]
+_LitobFullNoMb           0x800'0e99   0x114  Code  Lc  xprintffull_nomb.o [9]
+_Locale_lconv           0x2000'0008    0x38  Data  Lc  xlocale_c.o [9]
+_PrintfFullNoMb          0x800'01b3   0xcb8  Code  Gb  xprintffull_nomb.o [9]
+_Prout                   0x800'72e9    0x16  Code  Gb  xprout.o [9]
+_PutcharsFullNoMb        0x800'1005    0x2e  Code  Lc  xprintffull_nomb.o [9]
+_SProut                  0x800'110f     0xa  Code  Gb  xsprout.o [9]
+__aeabi_cdcmple          0x800'1301          Code  Gb  DblCmpLe.o [10]
+__aeabi_cdrcmple         0x800'1335          Code  Gb  DblCmpGe.o [10]
+__aeabi_d2f              0x800'3f99          Code  Gb  DblToFlt.o [10]
+__aeabi_d2iz             0x800'14a5          Code  Gb  DblToS32.o [10]
+__aeabi_d2uiz            0x800'19a9          Code  Gb  DblToU32.o [10]
+__aeabi_dadd             0x800'1501          Code  Gb  DblAddSub.o [10]
+__aeabi_ddiv             0x800'1761          Code  Gb  DblDiv.o [10]
+__aeabi_dmul             0x800'19e9          Code  Gb  DblMul.o [10]
+__aeabi_dsub             0x800'167d          Code  Gb  DblAddSub.o [10]
+__aeabi_f2d              0x800'6e31          Code  Gb  FltToDbl.o [10]
+__aeabi_i2d              0x800'14dd          Code  Gb  S32ToDbl.o [10]
+__aeabi_ldiv0            0x800'1dd5          Code  Gb  I64DivZer.o [11]
+__aeabi_memcpy           0x800'11e9          Code  Gb  ABImemcpy.o [11]
+__aeabi_memcpy4          0x800'1209          Code  Gb  ABImemcpy.o [11]
+__aeabi_memcpy8          0x800'1209          Code  Gb  ABImemcpy.o [11]
+__aeabi_ui2d             0x800'19cd          Code  Gb  U32ToDbl.o [10]
+__aeabi_uldivmod         0x800'1b9d          Code  Gb  I64DivMod.o [11]
+__cexit_closeall         0x800'728f          Code  Gb  cexit.o [11]
+__cmain                  0x800'7265          Code  Gb  cmain.o [11]
+__cstart_closeall        0x800'74d8          Data  Gb  cstart_closeall.o [11]
+__dwrite                 0x800'70f9    0x3c  Code  Gb  HSP_WRITE.o [8]
+__exit                   0x800'1dd9    0x14  Code  Gb  exit.o [12]
+__iar_Fail_s             0x800'1119    0x1c  Code  Gb  xfail_s.o [9]
+__iar_Memchr             0x800'1191          Code  Gb  memchr.o [11]
+__iar_Stderr            0x2000'00d0    0x48  Data  Gb  xfiles.o [9]
+__iar_Stdin             0x2000'0040    0x48  Data  Gb  xfiles.o [9]
+__iar_Stdout            0x2000'0088    0x48  Data  Gb  xfiles.o [9]
+__iar_Strchr             0x800'10f9          Code  Gb  strchr.o [11]
+__iar_data_init3         0x800'71f1    0x28  Code  Gb  data_init.o [11]
+__iar_frexp              0x800'129d          Code  Gb  frexp.o [10]
+__iar_frexpl             0x800'129d          Code  Gb  frexp.o [10]
+__iar_init_vfp           0x800'7219          Code  Gb  fpinit_M.o [10]
+__iar_ldexp64            0x800'1369          Code  Gb  ldexp.o [10]
+__iar_lz77_init_single3
+                         0x800'107b    0x7e  Code  Gb  lz77_init_single.o [11]
+__iar_program_start      0x800'729d          Code  Gb  cstartup_M.o [11]
+__iar_scalbln64          0x800'1369          Code  Gb  ldexp.o [10]
+__iar_scalbn64           0x800'1369          Code  Gb  ldexp.o [10]
+__iar_softfp___iar_frexp64
+                         0x800'1291          Code  Gb  frexp.o [10]
+__iar_softfp_frexp       0x800'1291          Code  Gb  frexp.o [10]
+__iar_softfp_frexpl      0x800'1291          Code  Gb  frexp.o [10]
+__iar_zero_init3         0x800'71b9    0x38  Code  Gb  zero_init3.o [11]
+__low_level_init         0x800'7283     0x4  Code  Gb  low_level_init.o [9]
+__vector_table           0x800'0000          Data  Gb  startup_gd32f450_470.o [7]
+__write_buffered         0x800'703d    0xbc  Code  Gb  xxwritebuffered.o [9]
+_call_main               0x800'7271          Code  Gb  cmain.o [11]
+_exit                    0x800'728d          Code  Gb  cexit.o [11]
+abort                    0x800'1dcd     0x6  Code  Gb  abort.o [9]
+adc_calibration_enable   0x800'6479    0x36  Code  Gb  gd32f4xx_adc.o [5]
+adc_channel_16_to_18     0x800'64af    0x4c  Code  Gb  gd32f4xx_adc.o [5]
+adc_channel_length_config
+                         0x800'64fb    0x74  Code  Gb  gd32f4xx_adc.o [5]
+adc_clock_config         0x800'63a9    0x14  Code  Gb  gd32f4xx_adc.o [5]
+adc_data_alignment_config
+                         0x800'6435    0x28  Code  Gb  gd32f4xx_adc.o [5]
+adc_enable               0x800'645d    0x1c  Code  Gb  gd32f4xx_adc.o [5]
+adc_external_trigger_config
+                         0x800'6663    0x58  Code  Gb  gd32f4xx_adc.o [5]
+adc_inserted_channel_config
+                         0x800'656f    0xf4  Code  Gb  gd32f4xx_adc.o [5]
+adc_special_function_config
+                         0x800'63bd    0x78  Code  Gb  gd32f4xx_adc.o [5]
+board_init               0x800'6709    0x50  Code  Gb  main.o [6]
+dci_capture_enable       0x800'4ae1     0xc  Code  Gb  gd32f4xx_dci.o [5]
+dci_enable               0x800'4ad5     0xc  Code  Gb  gd32f4xx_dci.o [5]
+dci_init                 0x800'4aa9    0x2c  Code  Gb  gd32f4xx_dci.o [5]
+delay                   0x2000'6598     0x4  Data  Lc  systick.o [6]
+delay_1ms                0x800'3cc1     0xc  Code  Gb  systick.o [6]
+delay_decrement          0x800'3ccd    0x10  Code  Gb  systick.o [6]
+dma_channel_disable      0x800'4485    0x24  Code  Gb  gd32f4xx_dma.o [5]
+dma_channel_enable       0x800'4461    0x24  Code  Gb  gd32f4xx_dma.o [5]
+dma_channel_subperipheral_select
+                         0x800'44a9    0x2c  Code  Gb  gd32f4xx_dma.o [5]
+dma_circulation_disable
+                         0x800'443d    0x24  Code  Gb  gd32f4xx_dma.o [5]
+dma_deinit               0x800'41e1    0xd0  Code  Gb  gd32f4xx_dma.o [5]
+dma_interrupt_enable     0x800'44d5    0x44  Code  Gb  gd32f4xx_dma.o [5]
+dma_interrupt_flag_clear
+                         0x800'47c3    0x5e  Code  Gb  gd32f4xx_dma.o [5]
+dma_interrupt_flag_get   0x800'4519   0x2aa  Code  Gb  gd32f4xx_dma.o [5]
+dma_single_data_mode_init
+                         0x800'42d7   0x160  Code  Gb  gd32f4xx_dma.o [5]
+dma_single_data_para_struct_init
+                         0x800'42b1    0x26  Code  Gb  gd32f4xx_dma.o [5]
+dt                      0x2000'0000     0x4  Data  Gb  main.o [6]
+ebuf                    0x2000'64f0    0x50  Data  Lc  xfiles.o [9]
+encoder_pulse           0x2000'6590     0x4  Data  Gb  gd32f4xx_it.o [6]
+encoder_speed           0x2000'65a4     0x2  Data  Gb  main.o [6]
+exit                     0x800'7287     0x4  Code  Gb  exit.o [9]
+exti_interrupt_flag_clear
+                         0x800'6ecb     0x6  Code  Gb  gd32f4xx_exti.o [5]
+exti_interrupt_flag_get
+                         0x800'6eb9    0x12  Code  Gb  gd32f4xx_exti.o [5]
+flagg                   0x2000'0138     0x1  Data  Gb  main.o [6]
+get_systick_counter      0x800'6d5d     0x6  Code  Gb  gd32f4xx_it.o [6]
+gpio_af_set              0x800'40eb    0x82  Code  Gb  gd32f4xx_gpio.o [5]
+gpio_bit_reset           0x800'40cf     0x8  Code  Gb  gd32f4xx_gpio.o [5]
+gpio_bit_set             0x800'40c7     0x8  Code  Gb  gd32f4xx_gpio.o [5]
+gpio_bit_toggle          0x800'416d     0x8  Code  Gb  gd32f4xx_gpio.o [5]
+gpio_input_bit_get       0x800'40d7    0x14  Code  Gb  gd32f4xx_gpio.o [5]
+gpio_mode_set            0x800'4001    0x66  Code  Gb  gd32f4xx_gpio.o [5]
+gpio_output_options_set
+                         0x800'4067    0x60  Code  Gb  gd32f4xx_gpio.o [5]
+hsp_adc0_config          0x800'6b9d    0x7e  Code  Gb  hsp_adc.o [2]
+hsp_adc_init             0x800'6b39    0x64  Code  Gb  hsp_adc.o [2]
+hsp_cat9555_init         0x800'6b05    0x34  Code  Gb  HSP_CAT9555.o [8]
+hsp_dci_dma_config       0x800'3e0b    0x74  Code  Gb  hsp_dci.o [2]
+hsp_dci_init             0x800'3cf9   0x112  Code  Gb  hsp_dci.o [2]
+hsp_gpio_init            0x800'6969   0x184  Code  Gb  hsp_gpio.o [2]
+hsp_i2c_init             0x800'37c5    0x6c  Code  Gb  hsp_i2c.o [2]
+hsp_i2c_mma8451_init     0x800'4c0d    0x72  Code  Gb  HSP_MMA8451.o [8]
+hsp_i2c_write_2byte      0x800'3831    0xb2  Code  Gb  hsp_i2c.o [2]
+hsp_mma8451_config       0x800'4bd9    0x34  Code  Gb  HSP_MMA8451.o [8]
+hsp_mma8451_read_byte    0x800'4c7f   0x178  Code  Gb  HSP_MMA8451.o [8]
+hsp_mma8451_write_byte   0x800'4df7   0x114  Code  Gb  HSP_MMA8451.o [8]
+hsp_mpu6050_init_on_PE2_PE3
+                         0x800'51f3     0xc  Code  Gb  HSP_MMA8451.o [8]
+hsp_mt9v034_config       0x800'2bf9    0x84  Code  Gb  HSP_MT9V034.o [8]
+hsp_mt9v034_init         0x800'2aed   0x100  Code  Gb  HSP_MT9V034.o [8]
+hsp_mt9v034_set_default
+                         0x800'2c7d   0x45a  Code  Gb  HSP_MT9V034.o [8]
+hsp_mt9v034_set_exposure
+                         0x800'32e1    0x70  Code  Gb  HSP_MT9V034.o [8]
+hsp_mt9v034_set_fps      0x800'3169   0x11c  Code  Gb  HSP_MT9V034.o [8]
+hsp_mt9v034_set_resolution
+                         0x800'30d7    0x90  Code  Gb  HSP_MT9V034.o [8]
+hsp_pwm_init             0x800'5c45   0x2ba  Code  Gb  hsp_timer.o [2]
+hsp_qdec_init            0x800'5eff    0xbc  Code  Gb  hsp_timer.o [2]
+hsp_sccb_init            0x800'38e3    0x6c  Code  Gb  hsp_i2c.o [2]
+hsp_sccb_read_2byte      0x800'3c0d    0x32  Code  Gb  hsp_i2c.o [2]
+hsp_sccb_read_byte       0x800'3a7b   0x176  Code  Gb  hsp_i2c.o [2]
+hsp_sccb_write_2byte     0x800'3a53    0x28  Code  Gb  hsp_i2c.o [2]
+hsp_sccb_write_byte      0x800'394f   0x104  Code  Gb  hsp_i2c.o [2]
+hsp_servo_angle          0x800'6c29    0xde  Code  Gb  HSP_MOTOR.o [8]
+hsp_soft_i2c_init        0x800'4f23    0x38  Code  Gb  HSP_MMA8451.o [8]
+hsp_spi_dma_config       0x800'33cf    0x62  Code  Gb  hsp_spi.o [2]
+hsp_spi_init             0x800'3351    0x7e  Code  Gb  hsp_spi.o [2]
+hsp_spi_write_byte       0x800'3541    0x22  Code  Lc  HSP_TFT18.o [8]
+hsp_tft18_clear          0x800'35f5    0x38  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_init           0x800'3441   0x100  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_set_region     0x800'35b7    0x3e  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_show_char      0x800'362d    0x7e  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_show_char_color
+                         0x800'36ab    0x88  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_show_str       0x800'3733    0x36  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_show_str_color
+                         0x800'3769    0x4a  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_write_2byte    0x800'3593    0x24  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_write_byte     0x800'357b    0x18  Code  Gb  HSP_TFT18.o [8]
+hsp_tft18_write_cmd      0x800'3563    0x18  Code  Gb  HSP_TFT18.o [8]
+hsp_uart6_config         0x800'62c5    0x5e  Code  Gb  hsp_uart.o [2]
+hsp_uart_init            0x800'6011   0x110  Code  Gb  hsp_uart.o [2]
+hsp_usart1_config        0x800'6121    0x8c  Code  Gb  hsp_uart.o [2]
+hsp_usart2_config        0x800'61ad    0x8c  Code  Gb  hsp_uart.o [2]
+hsp_usart2_dma_config    0x800'6323    0x5c  Code  Gb  hsp_uart.o [2]
+hsp_usart5_config        0x800'6239    0x8c  Code  Gb  hsp_uart.o [2]
+i2c_ack_config           0x800'49c3     0xe  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_analog_noise_filter_enable
+                         0x800'4a1b    0x12  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_clock_config         0x800'4879   0x12a  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_data_receive         0x800'4a13     0x8  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_data_transmit        0x800'4a07     0xc  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_deinit               0x800'4821    0x58  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_enable               0x800'49e9     0xa  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_flag_clear           0x800'4a4d    0x42  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_flag_get             0x800'4a2d    0x20  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_master_addressing    0x800'49d1    0x18  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_mode_addr_config     0x800'49a3    0x20  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_start_on_bus         0x800'49f3     0xa  Code  Gb  gd32f4xx_i2c.o [5]
+i2c_stop_on_bus          0x800'49fd     0xa  Code  Gb  gd32f4xx_i2c.o [5]
+image2_use              0x2000'473c  0x1d60  Data  Gb  Ex7_dci.o [1]
+image_raw               0x2003'0000  0x5820  Data  Gb  main.o [6]
+image_ready             0x2000'65a6     0x1  Data  Gb  Ex7_dci.o [1]
+image_size              0x2000'65a7     0x1  Data  Gb  Ex7_dci.o [1]
+image_use               0x2000'013c  0x4600  Data  Gb  Ex7_dci.o [1]
+ldexp                    0x800'1369          Code  Gb  ldexp.o [10]
+ldexpl                   0x800'1369          Code  Gb  ldexp.o [10]
+localeconv               0x800'1b95     0x4  Code  Gb  xlocale_c.o [9]
+main                     0x800'6759   0x1ce  Code  Gb  main.o [6]
+memchr                   0x800'1191          Code  Gb  memchr.o [11]
+normalize_angle          0x800'66c1    0x32  Code  Lc  main.o [6]
+nvic_config              0x800'66f3    0x16  Code  Gb  main.o [6]
+nvic_irq_enable          0x800'4aff    0xca  Code  Gb  gd32f4xx_misc.o [5]
+nvic_priority_group_set
+                         0x800'4af5     0xa  Code  Gb  gd32f4xx_misc.o [5]
+obuf                    0x2000'6540    0x50  Data  Lc  xfiles.o [9]
+pit_counter1            0x2000'65a0     0x2  Data  Lc  hsp_timer.o [2]
+printf                   0x800'5251    0x28  Code  Gb  printf.o [9]
+putchar                  0x800'7135    0x44  Code  Gb  putchar.o [9]
+rcu_clock_freq_get       0x800'29c9   0x100  Code  Gb  gd32f4xx_rcu.o [5]
+rcu_periph_clock_enable
+                         0x800'2931    0x28  Code  Gb  gd32f4xx_rcu.o [5]
+rcu_periph_reset_disable
+                         0x800'2981    0x28  Code  Gb  gd32f4xx_rcu.o [5]
+rcu_periph_reset_enable
+                         0x800'2959    0x28  Code  Gb  gd32f4xx_rcu.o [5]
+rcu_timer_clock_prescaler_config
+                         0x800'29a9    0x20  Code  Gb  gd32f4xx_rcu.o [5]
+scalbln                  0x800'1369          Code  Gb  ldexp.o [10]
+scalblnl                 0x800'1369          Code  Gb  ldexp.o [10]
+scalbn                   0x800'1369          Code  Gb  ldexp.o [10]
+scalbnl                  0x800'1369          Code  Gb  ldexp.o [10]
+scale                    0x800'0fad    0x46  Code  Lc  xprintffull_nomb.o [9]
+sec_hand                0x2000'659c     0x4  Data  Lc  xfail_s.o [9]
+soft_i2c_delay           0x800'4f0b    0x18  Code  Lc  HSP_MMA8451.o [8]
+soft_i2c_read_bit        0x800'4ff5    0x38  Code  Gb  HSP_MMA8451.o [8]
+soft_i2c_read_byte       0x800'504d    0x36  Code  Gb  HSP_MMA8451.o [8]
+soft_i2c_start           0x800'4f5b    0x32  Code  Gb  HSP_MMA8451.o [8]
+soft_i2c_stop            0x800'4f8d    0x2a  Code  Gb  HSP_MMA8451.o [8]
+soft_i2c_write_bit       0x800'4fb7    0x3e  Code  Gb  HSP_MMA8451.o [8]
+soft_i2c_write_byte      0x800'502d    0x20  Code  Gb  HSP_MMA8451.o [8]
+spi_dma_enable           0x800'41bb    0x24  Code  Gb  gd32f4xx_spi.o [5]
+spi_enable               0x800'41b1     0xa  Code  Gb  gd32f4xx_spi.o [5]
+spi_init                 0x800'4175    0x3c  Code  Gb  gd32f4xx_spi.o [5]
+sprintf                  0x800'6e79    0x40  Code  Gb  sprintf.o [9]
+store                   0x2000'649c    0x50  Data  Lc  xxwritebuffered.o [9]
+storeLen                0x2000'64ec     0x4  Data  Lc  xxwritebuffered.o [9]
+strchr                   0x800'10f9          Code  Gb  strchr.o [11]
+strlen                   0x800'1159          Code  Gb  strlen.o [11]
+sys_tick_counter        0x2000'6594     0x4  Data  Gb  main.o [6]
+system_clock_200m_irc16m
+                         0x800'6f69    0xa8  Code  Lc  system_gd32f4xx.o [3]
+system_clock_config      0x800'6f61     0x8  Code  Lc  system_gd32f4xx.o [3]
+systick_config           0x800'3c9d    0x24  Code  Gb  systick.o [6]
+tft_ascii                0x800'5278   0x5f0  Data  Gb  HSP_TFT18.o [8]
+timer_auto_reload_shadow_enable
+                         0x800'202d     0xa  Code  Gb  gd32f4xx_timer.o [5]
+timer_channel_input_capture_prescaler_config
+                         0x800'27d1    0xae  Code  Gb  gd32f4xx_timer.o [5]
+timer_channel_input_struct_para_init
+                         0x800'2577    0x12  Code  Gb  gd32f4xx_timer.o [5]
+timer_channel_output_config
+                         0x800'2091   0x31c  Code  Gb  gd32f4xx_timer.o [5]
+timer_channel_output_mode_config
+                         0x800'23e5    0xae  Code  Gb  gd32f4xx_timer.o [5]
+timer_channel_output_pulse_value_config
+                         0x800'2493    0x36  Code  Gb  gd32f4xx_timer.o [5]
+timer_channel_output_shadow_config
+                         0x800'24c9    0xae  Code  Gb  gd32f4xx_timer.o [5]
+timer_channel_output_struct_para_init
+                         0x800'2077    0x1a  Code  Gb  gd32f4xx_timer.o [5]
+timer_counter_read       0x800'203f     0xc  Code  Gb  gd32f4xx_timer.o [5]
+timer_counter_value_config
+                         0x800'2037     0x8  Code  Gb  gd32f4xx_timer.o [5]
+timer_deinit             0x800'1ded   0x17a  Code  Gb  gd32f4xx_timer.o [5]
+timer_enable             0x800'2023     0xa  Code  Gb  gd32f4xx_timer.o [5]
+timer_init               0x800'1f83    0xa0  Code  Gb  gd32f4xx_timer.o [5]
+timer_input_capture_config
+                         0x800'2589   0x248  Code  Gb  gd32f4xx_timer.o [5]
+timer_interrupt_flag_clear
+                         0x800'2925     0xa  Code  Gb  gd32f4xx_timer.o [5]
+timer_interrupt_flag_get
+                         0x800'2905    0x20  Code  Gb  gd32f4xx_timer.o [5]
+timer_primary_output_config
+                         0x800'204b    0x2c  Code  Gb  gd32f4xx_timer.o [5]
+timer_quadrature_decoder_mode_config
+                         0x800'287f    0x80  Code  Gb  gd32f4xx_timer.o [5]
+timer_struct_para_init   0x800'1f67    0x1c  Code  Gb  gd32f4xx_timer.o [5]
+usart_baudrate_set       0x800'5933    0xec  Code  Gb  gd32f4xx_usart.o [5]
+usart_data_receive       0x800'5af5     0xa  Code  Gb  gd32f4xx_usart.o [5]
+usart_data_transmit      0x800'5ae7     0xe  Code  Gb  gd32f4xx_usart.o [5]
+usart_deinit             0x800'5869    0xca  Code  Gb  gd32f4xx_usart.o [5]
+usart_dma_transmit_config
+                         0x800'5b47    0x24  Code  Gb  gd32f4xx_usart.o [5]
+usart_enable             0x800'5aa1    0x12  Code  Gb  gd32f4xx_usart.o [5]
+usart_flag_clear         0x800'5b8b    0x28  Code  Gb  gd32f4xx_usart.o [5]
+usart_flag_get           0x800'5b6b    0x20  Code  Gb  gd32f4xx_usart.o [5]
+usart_hardware_flow_cts_config
+                         0x800'5b23    0x24  Code  Gb  gd32f4xx_usart.o [5]
+usart_hardware_flow_rts_config
+                         0x800'5aff    0x24  Code  Gb  gd32f4xx_usart.o [5]
+usart_interrupt_disable
+                         0x800'5bdb    0x28  Code  Gb  gd32f4xx_usart.o [5]
+usart_interrupt_enable   0x800'5bb3    0x28  Code  Gb  gd32f4xx_usart.o [5]
+usart_interrupt_flag_get
+                         0x800'5c03    0x40  Code  Gb  gd32f4xx_usart.o [5]
+usart_parity_config      0x800'5a41    0x20  Code  Gb  gd32f4xx_usart.o [5]
+usart_receive_config     0x800'5acd    0x1a  Code  Gb  gd32f4xx_usart.o [5]
+usart_stop_bit_set       0x800'5a81    0x20  Code  Gb  gd32f4xx_usart.o [5]
+usart_transmit_config    0x800'5ab3    0x1a  Code  Gb  gd32f4xx_usart.o [5]
+usart_word_length_set    0x800'5a61    0x20  Code  Gb  gd32f4xx_usart.o [5]
+
+
+[1] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\App_2489385672134236918.dir
+[2] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Board_7221520210927654578.dir
+[3] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\CMSIS_13545061835669826545.dir
+[4] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\FatFS_2687367267609184630.dir
+[5] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\GD32F470_Peripherals_11143062579488607573.dir
+[6] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Main_13238667732884069010.dir
+[7] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Startup_17868067532763321386.dir
+[8] = D:\Study_resources\电赛\pk\DianSai2025\HSPv2_HC04 - straight\Debug\Obj\Utilities_17002154029713865955.dir
+[9] = dl7M_tlf.a
+[10] = m7M_tls.a
+[11] = rt7M_tl.a
+[12] = shb_l.a
+
+  28'177 bytes of readonly  code memory
+   1'846 bytes of readonly  data memory
+  34'213 bytes of readwrite data memory (+ 22'560 absolute)
+
+Errors: none
+Warnings: none
