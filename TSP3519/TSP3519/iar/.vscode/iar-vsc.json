@@ -1,0 +1,18 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\empty_mspm0g3519_nortos_iar.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\empty_mspm0g3519_nortos_iar.eww": {
+      "configs": {
+        "${workspaceFolder}\\empty_mspm0g3519_nortos_iar.ewp": "Debug"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\empty_mspm0g3519_nortos_iar.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "D:\\iar\\ewarm-9.60.3"
+  }
+}

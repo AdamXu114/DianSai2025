@@ -56,6 +56,7 @@ uint8_t menu_id=0;			// MenuItem ID returned by Menu_Loop()
 uint8_t rx_buffer[100];		// usart2 receiving buffer
 uint8_t tx_buffer[100];		// usart2 transmitting buffer
 uint16_t rx_idx=0, tx_idx=0;
+uint8_t rx_flag = 0;		// 接收完成标志
 
 #pragma location = 0X20030000
 uint8_t image_raw[22560];

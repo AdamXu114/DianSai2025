@@ -41,6 +41,7 @@ extern uint8_t RES_value;
 extern int16_t encoder_speed;
 extern uint8_t rx_buffer[] ;
 extern uint16_t rx_idx, tx_idx;
+extern uint8_t rx_flag; // 新增：接收完成标志
 uint32_t encoder_pulse;
 uint32_t encoder_pulse_t;
 
@@ -187,11 +188,19 @@ void UART6_IRQHandler(void)
     if((RESET != usart_interrupt_flag_get(UART6, USART_INT_FLAG_RBNE)) && 
        (RESET != usart_flag_get(UART6, USART_FLAG_RBNE)))
     {
-        /* read one byte from the receive data register */
         data = (uint8_t)usart_data_receive(UART6);
-        
-        LED1_TOGGLE();
 
+        // 存入缓冲区
+        if(rx_idx < 100) {
+            rx_buffer[rx_idx++] = data;
+        }
+
+        // 判断是否接收到\r\n
+        if(rx_idx >= 2 && rx_buffer[rx_idx-2] == '\r' && rx_buffer[rx_idx-1] == '\n') {
+            rx_flag = 1; // 标记接收完成
+            // 可在此处处理数据或在主循环处理
+        }
+        LED1_TOGGLE();
     }
 }
 

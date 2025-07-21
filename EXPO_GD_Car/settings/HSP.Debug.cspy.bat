@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.general.xcl" --backend -f "D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.driver.xcl" 
+"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.general.xcl" --backend -f "D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.driver.xcl" 
+"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\settings\HSP.Debug.driver.xcl" 
 
 @echo off 
 :end

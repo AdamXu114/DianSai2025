@@ -6,7 +6,7 @@
 
 -p
 
-C:\iar\ewarm-9.60.3\arm\config\debugger\GD\GD32F470xG.ddf
+D:\iar\ewarm-9.60.3\arm\config\debugger\GD\GD32F470xG.ddf
 
 --semihosting
 
@@ -16,7 +16,7 @@ C:\iar\ewarm-9.60.3\arm\config\debugger\GD\GD32F470xG.ddf
 
 --jet_probe=cmsisdap
 
---jet_script_file=C:\iar\ewarm-9.60.3\arm/config/debugger/GD/GD32.ProbeScript
+--jet_script_file=D:\iar\ewarm-9.60.3\arm/config/debugger/GD/GD32.ProbeScript
 
 --jet_standard_reset=1,0,0
 

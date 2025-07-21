@@ -1,61 +1,61 @@
-"D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Board\hsp_timer.c"
+"D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Board\hsp_timer.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Debug\BrowseInfo\Board_7221520210927654578.dir\hsp_timer.pbi.dep
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Debug\BrowseInfo\Board_7221520210927654578.dir\hsp_timer.pbi.dep
 -o
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Debug\BrowseInfo\Board_7221520210927654578.dir\hsp_timer.pbi
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Debug\BrowseInfo\Board_7221520210927654578.dir\hsp_timer.pbi
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Board
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Board
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Main\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Main\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Board\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Board\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS\GD\GD32F4xx\Include\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS\GD\GD32F4xx\Include\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Main\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Main\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Utilities\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Utilities\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\App\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\App\
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\FatFS\
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\FatFS\
 -I
-C:\iar\ewarm-9.60.3\arm\CMSIS\Core\Include
+D:\iar\ewarm-9.60.3\arm\CMSIS\Core\Include
 -I
-C:\iar\ewarm-9.60.3\arm\inc\c\aarch32
+D:\iar\ewarm-9.60.3\arm\inc\c\aarch32
 -I
-C:\iar\ewarm-9.60.3\arm\inc
+D:\iar\ewarm-9.60.3\arm\inc
 -I
-C:\iar\ewarm-9.60.3\arm\inc\c
+D:\iar\ewarm-9.60.3\arm\inc\c
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Main
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Main
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Board
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Board
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS\GD\GD32F4xx\Include
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\CMSIS\GD\GD32F4xx\Include
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\GD32F4xx_standard_peripheral\Include
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Main
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Main
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\Utilities
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\Utilities
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\App
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\App
 -I
-D:\Documents\nuedc\EXPO_GD_Car (1)\EXPO_GD_Car\FatFS
+D:\Study_resources\电赛\EXPO_GD_Car (1)\EXPO_GD_Car (1)\EXPO_GD_Car\FatFS
 -I
-C:\iar\ewarm-9.60.3\arm\CMSIS\Core\Include
+D:\iar\ewarm-9.60.3\arm\CMSIS\Core\Include
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -436,8 +436,8 @@ C:\iar\ewarm-9.60.3\arm\CMSIS\Core\Include
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -D__EDG_INT128_EXTENSIONS_ALLOWED=0
 -DGD32F470=1
--D_DLIB_CONFIG_FILE_HEADER_NAME="C:\iar\ewarm-9.60.3\arm\inc\c\DLib_Config_Full.h"
--D_DLIB_CONFIG_FILE_STRING="C:\\iar\\ewarm-9.60.3\\arm\\inc\\c\\DLib_Config_Full.h"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="D:\iar\ewarm-9.60.3\arm\inc\c\DLib_Config_Full.h"
+-D_DLIB_CONFIG_FILE_STRING="D:\\iar\\ewarm-9.60.3\\arm\\inc\\c\\DLib_Config_Full.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V9.60.3.422/W64 for ARM"
 -D_VA_DEFINED=
 -D_VA_LIST=struct __va_list
