@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" --backend -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
+& "D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" --backend -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
 }
 else
 {
-& "D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
+& "D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
 }

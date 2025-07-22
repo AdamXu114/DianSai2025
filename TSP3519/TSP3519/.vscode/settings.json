@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "tsp_i2c.h": "c",
+        "ti_msp_dl_config.h": "c",
+        "tsp_isr.h": "c"
+    }
+}

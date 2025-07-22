@@ -1,7 +1,7 @@
-D:\Study_resources\电赛\TSP3519\TSP3519\iar\Debug\BrowseInfo\NUEDU2025_11847588325976546582.dir\tsp_isr.pbi: \
-  D:\Study_resources\鐢佃禌\TSP3519\TSP3519\NUEDC2025\tsp_isr.c \
-  D:\Study_resources\鐢佃禌\TSP3519\TSP3519\NUEDC2025\tsp_isr.h \
-  D:\Study_resources\电赛\TSP3519\TSP3519\iar\..\TSP3519\tsp_common_headfile.h \
+D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\Debug\BrowseInfo\NUEDU2025_11847588325976546582.dir\tsp_isr.pbi: \
+  D:\Study_resources\鐢佃禌\main\main\TSP3519\TSP3519\NUEDC2025\tsp_isr.c \
+  D:\Study_resources\鐢佃禌\main\main\TSP3519\TSP3519\NUEDC2025\tsp_isr.h \
+  D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\..\TSP3519\tsp_common_headfile.h \
   D:\iar\ewarm-9.60.3\arm\inc\c\stdio.h \
   D:\iar\ewarm-9.60.3\arm\inc\c\ycheck.h \
   D:\iar\ewarm-9.60.3\arm\inc\c\yvals.h \
@@ -12,7 +12,7 @@ D:\Study_resources\电赛\TSP3519\TSP3519\iar\Debug\BrowseInfo\NUEDU2025_118475883
   D:\iar\ewarm-9.60.3\arm\inc\c\stdint.h \
   D:\iar\ewarm-9.60.3\arm\inc\c\string.h \
   D:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product_string.h \
-  D:\Study_resources\电赛\TSP3519\TSP3519\iar\ti_msp_dl_config.h \
+  D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\ti_msp_dl_config.h \
   D:\ti\mspm0_sdk_2_05_01_00\source\ti\devices\msp\msp.h \
   D:\ti\mspm0_sdk_2_05_01_00\source\ti\devices\DeviceFamily.h \
   D:\ti\mspm0_sdk_2_05_01_00\source\ti\devices\msp\m0p\mspm0g351x.h \

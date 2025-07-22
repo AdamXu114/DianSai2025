@@ -21,26 +21,26 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <PlDriver>
-        <FirstRun>0</FirstRun>
         <MemConfigValue>D:\iar\ewarm-9.60.3\arm\config\debugger\TexasInstruments\MSPM0G3519.ddf</MemConfigValue>
+        <FirstRun>0</FirstRun>
     </PlDriver>
     <XdsDriver>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <CStepIntDis>_ 0</CStepIntDis>
     </XdsDriver>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <Jet>
-        <JetConnSerialNo>CMSIS-DAP v2:000000800670FF534867784967222134A5A5A5A597969908</JetConnSerialNo>
-        <JetConnFoundProbes>CMSIS-DAP v1:000000800670ff534867784967222134a5a5a5a597969908:CMSIS-DAP v2:000000800670FF534867784967222134A5A5A5A597969908:</JetConnFoundProbes>
-        <PrevWtdReset>System</PrevWtdReset>
-        <OnlineReset>Software</OnlineReset>
         <DisableInterrupts>0</DisableInterrupts>
         <LeaveRunning>1</LeaveRunning>
         <MultiCoreRunAll>0</MultiCoreRunAll>
         <CpuHaltOnBreakpointSet>0</CpuHaltOnBreakpointSet>
+        <OnlineReset>Software</OnlineReset>
+        <JetConnSerialNo>CMSIS-DAP v2:00000080066BFF534867784967182457A5A5A5A597969908</JetConnSerialNo>
+        <JetConnFoundProbes>CMSIS-DAP v1:00000080066bff534867784967182457a5a5a5a597969908:CMSIS-DAP v2:00000080066BFF534867784967182457A5A5A5A597969908:</JetConnFoundProbes>
+        <PrevWtdReset>System</PrevWtdReset>
     </Jet>
     <SWOManager>
         <SamplingDivider>8192</SamplingDivider>
@@ -56,7 +56,7 @@
         <PowerConnectPC>1</PowerConnectPC>
     </SWOManager>
     <DebugChecksum>
-        <Checksum>250803825</Checksum>
+        <Checksum>1463059017</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -99,6 +99,16 @@
         <EventLSU>0</EventLSU>
         <EventSLEEP>0</EventSLEEP>
     </SWOTraceWindow>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>2</Mode>
@@ -112,16 +122,6 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
-    <TermIOLog>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ ""</LogFile>
-    </TermIOLog>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Count>0</Count>
-    </Breakpoints2>
     <Aliases>
         <Count>0</Count>
         <SuppressDialog>0</SuppressDialog>

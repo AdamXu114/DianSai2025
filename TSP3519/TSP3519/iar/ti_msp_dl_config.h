@@ -137,6 +137,22 @@ extern "C" {
 
 
 
+
+/* Defines for MPU6050 */
+#define MPU6050_INST                                                        I2C0
+#define MPU6050_INST_IRQHandler                                  I2C0_IRQHandler
+#define MPU6050_INST_INT_IRQN                                      I2C0_INT_IRQn
+#define MPU6050_BUS_SPEED_HZ                                              400000
+#define GPIO_MPU6050_SDA_PORT                                              GPIOB
+#define GPIO_MPU6050_SDA_PIN                                      DL_GPIO_PIN_22
+#define GPIO_MPU6050_IOMUX_SDA                                   (IOMUX_PINCM50)
+#define GPIO_MPU6050_IOMUX_SDA_FUNC                    IOMUX_PINCM50_PF_I2C0_SDA
+#define GPIO_MPU6050_SCL_PORT                                              GPIOB
+#define GPIO_MPU6050_SCL_PIN                                      DL_GPIO_PIN_21
+#define GPIO_MPU6050_IOMUX_SCL                                   (IOMUX_PINCM49)
+#define GPIO_MPU6050_IOMUX_SCL_FUNC                    IOMUX_PINCM49_PF_I2C0_SCL
+
+
 /* Defines for K230 */
 #define K230_INST                                                          UART6
 #define K230_INST_FREQUENCY                                             80000000
@@ -244,6 +260,13 @@ extern "C" {
 /* Defines for S1: GPIOC.0 with pinCMx 74 on package pin 56 */
 #define PORTC_S1_PIN                                             (DL_GPIO_PIN_0)
 #define PORTC_S1_IOMUX                                           (IOMUX_PINCM74)
+/* Defines for MPU6050_INT: GPIOC.8 with pinCMx 86 on package pin 80 */
+// pins affected by this interrupt request:["MPU6050_INT"]
+#define PORTC_INT_IRQN                                          (GPIOC_INT_IRQn)
+#define PORTC_INT_IIDX                          (DL_INTERRUPT_GROUP1_IIDX_GPIOC)
+#define PORTC_MPU6050_INT_IIDX                               (DL_GPIO_IIDX_DIO8)
+#define PORTC_MPU6050_INT_PIN                                    (DL_GPIO_PIN_8)
+#define PORTC_MPU6050_INT_IOMUX                                  (IOMUX_PINCM86)
 
 
 
@@ -255,6 +278,7 @@ void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
 void SYSCFG_DL_Servo_init(void);
 void SYSCFG_DL_Motor_init(void);
+void SYSCFG_DL_MPU6050_init(void);
 void SYSCFG_DL_K230_init(void);
 void SYSCFG_DL_LCD_init(void);
 

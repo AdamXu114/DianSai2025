@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" --backend -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
+"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" --backend -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Study_resources\电赛\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
+"D:\iar\ewarm-9.60.3\common\bin\cspybat" -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\settings\empty_mspm0g3519_nortos_iar.Debug.driver.xcl" 
 
 @echo off 
 :end

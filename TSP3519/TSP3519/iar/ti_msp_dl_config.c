@@ -56,6 +56,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     SYSCFG_DL_SYSCTL_init();
     SYSCFG_DL_Servo_init();
     SYSCFG_DL_Motor_init();
+    SYSCFG_DL_MPU6050_init();
     SYSCFG_DL_K230_init();
     SYSCFG_DL_LCD_init();
     SYSCFG_DL_SYSTICK_init();
@@ -100,6 +101,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_GPIO_reset(GPIOC);
     DL_TimerG_reset(Servo_INST);
     DL_TimerA_reset(Motor_INST);
+    DL_I2C_reset(MPU6050_INST);
     DL_UART_Main_reset(K230_INST);
     DL_SPI_reset(LCD_INST);
 
@@ -109,6 +111,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_GPIO_enablePower(GPIOC);
     DL_TimerG_enablePower(Servo_INST);
     DL_TimerA_enablePower(Motor_INST);
+    DL_I2C_enablePower(MPU6050_INST);
     DL_UART_Main_enablePower(K230_INST);
     DL_SPI_enablePower(LCD_INST);
 
@@ -135,6 +138,17 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_enableOutput(GPIO_Motor_C2_PORT, GPIO_Motor_C2_PIN);
     DL_GPIO_initPeripheralOutputFunction(GPIO_Motor_C3_IOMUX,GPIO_Motor_C3_IOMUX_FUNC);
     DL_GPIO_enableOutput(GPIO_Motor_C3_PORT, GPIO_Motor_C3_PIN);
+
+    DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_MPU6050_IOMUX_SDA,
+        GPIO_MPU6050_IOMUX_SDA_FUNC, DL_GPIO_INVERSION_DISABLE,
+        DL_GPIO_RESISTOR_NONE, DL_GPIO_HYSTERESIS_DISABLE,
+        DL_GPIO_WAKEUP_DISABLE);
+    DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_MPU6050_IOMUX_SCL,
+        GPIO_MPU6050_IOMUX_SCL_FUNC, DL_GPIO_INVERSION_DISABLE,
+        DL_GPIO_RESISTOR_NONE, DL_GPIO_HYSTERESIS_DISABLE,
+        DL_GPIO_WAKEUP_DISABLE);
+    DL_GPIO_enableHiZ(GPIO_MPU6050_IOMUX_SDA);
+    DL_GPIO_enableHiZ(GPIO_MPU6050_IOMUX_SCL);
 
     DL_GPIO_initPeripheralOutputFunction(
         GPIO_K230_IOMUX_TX, GPIO_K230_IOMUX_TX_FUNC);
@@ -199,6 +213,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_NONE,
 		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
+    DL_GPIO_initDigitalInputFeatures(PORTC_MPU6050_INT_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_UP,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
+
     DL_GPIO_clearPins(PORTA_PORT, PORTA_BUZZ_PIN |
 		PORTA_LCD_RST_PIN |
 		PORTA_LCD_BL_PIN);
@@ -224,7 +242,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_enableOutput(PORTC_PORT, PORTC_CCD_SI1_PIN |
 		PORTC_CCD_SI2_PIN |
 		PORTC_CCD_CLK2_PIN);
-
+    DL_GPIO_setLowerPinsPolarity(PORTC_PORT, DL_GPIO_PIN_8_EDGE_FALL);
+    DL_GPIO_clearInterruptStatus(PORTC_PORT, PORTC_MPU6050_INT_PIN);
+    DL_GPIO_enableInterrupt(PORTC_PORT, PORTC_MPU6050_INT_PIN);
+    
 }
 
 
@@ -260,7 +281,9 @@ SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
     DL_SYSCTL_setULPCLKDivider(DL_SYSCTL_ULPCLK_DIV_2);
     DL_SYSCTL_enableMFCLK();
     DL_SYSCTL_setMCLKSource(SYSOSC, HSCLK, DL_SYSCTL_HSCLK_SOURCE_SYSPLL);
-
+    /* INT_GROUP1 Priority */
+    NVIC_SetPriority(GPIOC_INT_IRQn, 1);
+    NVIC_EnableIRQ(GPIOC_INT_IRQn);
 }
 
 
@@ -382,6 +405,34 @@ SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
 }
 
 
+static const DL_I2C_ClockConfig gMPU6050ClockConfig = {
+    .clockSel = DL_I2C_CLOCK_BUSCLK,
+    .divideRatio = DL_I2C_CLOCK_DIVIDE_1,
+};
+
+SYSCONFIG_WEAK void SYSCFG_DL_MPU6050_init(void) {
+
+    DL_I2C_setClockConfig(MPU6050_INST,
+        (DL_I2C_ClockConfig *) &gMPU6050ClockConfig);
+    DL_I2C_setAnalogGlitchFilterPulseWidth(MPU6050_INST,
+        DL_I2C_ANALOG_GLITCH_FILTER_WIDTH_50NS);
+    DL_I2C_enableAnalogGlitchFilter(MPU6050_INST);
+
+    /* Configure Controller Mode */
+    DL_I2C_resetControllerTransfer(MPU6050_INST);
+    /* Set frequency to 400000 Hz*/
+    DL_I2C_setTimerPeriod(MPU6050_INST, 9);
+    DL_I2C_setControllerTXFIFOThreshold(MPU6050_INST, DL_I2C_TX_FIFO_LEVEL_EMPTY);
+    DL_I2C_setControllerRXFIFOThreshold(MPU6050_INST, DL_I2C_RX_FIFO_LEVEL_BYTES_1);
+    DL_I2C_enableControllerClockStretching(MPU6050_INST);
+
+
+    /* Enable module */
+    DL_I2C_enableController(MPU6050_INST);
+    /* Enable interrupts */
+
+}
+
 static const DL_UART_Main_ClockConfig gK230ClockConfig = {
     .clockSel    = DL_UART_MAIN_CLOCK_BUSCLK,
     .divideRatio = DL_UART_MAIN_CLOCK_DIVIDE_RATIO_1
@@ -409,6 +460,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_K230_init(void)
     DL_UART_Main_setOversampling(K230_INST, DL_UART_OVERSAMPLING_RATE_16X);
     DL_UART_Main_setBaudRateDivisor(K230_INST, K230_IBRD_80_MHZ_115200_BAUD, K230_FBRD_80_MHZ_115200_BAUD);
 
+
+    /* Configure Interrupts */
+    DL_UART_Main_enableInterrupt(K230_INST,
+                                 DL_UART_MAIN_INTERRUPT_RXD_POS_EDGE);
 
 
     DL_UART_Main_enable(K230_INST);
