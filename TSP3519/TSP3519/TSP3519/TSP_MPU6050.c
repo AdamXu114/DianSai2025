@@ -60,7 +60,7 @@ void MPU6050ReadGyro(short *gyroData)
        gyroData[0] = (buf[0] << 8) | buf[1];
        gyroData[1] = (buf[2] << 8) | buf[3];
        gyroData[2] = (buf[4] << 8) | buf[5];
-       tsp_tft18_show_str(0, 1, "MPU6050 Read OK");
+       //tsp_tft18_show_str(0, 1, "MPU6050 Read OK");
    } else {
        gyroData[0] = 0;
        gyroData[1] = 0;
