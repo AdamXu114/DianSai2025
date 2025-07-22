@@ -25,6 +25,13 @@ uint32_t get_systick_counter(void)
 {
 	return sys_tick_counter;
 }
+int mspm0_get_clock_ms(unsigned long *count)
+{
+    if (!count)
+        return 1;
+    count[0] = sys_tick_counter;
+    return 0;
+}
 
 /*
 void UART0_IRQHandler (void)

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\Debug\Exe\empty_mspm0g3519_nortos_iar.out</Path>
+            <Output>
+                <Path>D:\Study_resources\电赛\main\main\TSP3519\TSP3519\iar\Debug\List\empty_mspm0g3519_nortos_iar.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>

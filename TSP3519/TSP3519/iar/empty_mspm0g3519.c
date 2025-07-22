@@ -44,6 +44,7 @@ static float normalize_angle(float a) {
     while (a < -180.0f) a += 360.0f;
     return a;
 }
+int16_t gz = 0; // 陀螺仪 Z 轴数据
 int main(void)
 {
 	uint32_t count=0;
@@ -57,6 +58,7 @@ int main(void)
 	tsp_tft18_show_str_color(0, 0, "NUEDC-2025 SAIS@SJTU", BLUE, YELLOW);
     MPU6050_Init();
     MPU6050ReadID();
+    
 	/* 初始化 yaw_ref */
     float yaw = 0.0f, yaw_ref;
     {
@@ -64,60 +66,53 @@ int main(void)
         const int N0 = 5;
         uint32_t start_time = get_systick_counter();
         for (int i = 0; i < N0; i++) {
-            short gyro[3];
-            MPU6050ReadGyro(gyro);
-            int16_t gz = gyro[2];
-            //tsp_tft18_show_int16(0, 6 , gz);
+            float gyro[3];
+            
+            Gyro_GetAngularRate(gyro);
+            gz = gyro[2];
+            
             uint32_t Current_time = get_systick_counter();
             dt = Current_time - start_time;
-            tmp += (gz / 131.0f) * dt / 20.0f / 81.0f * 90.0f / 91.5f * 90.0f;
+            tmp += (gz / 131.0f) /12.0f *90.0f* (float)dt ;
             start_time = Current_time;
             delay_1ms(3);
         }
+        
         yaw_ref = tmp / N0;
     }
-
+    
 	while (1) {
-		//delay_1ms(1000);
-		//DL_GPIO_togglePins(GPIO_GRP_0_PORT, DL_GPIO_PIN_5);
-//		if(S1())
-//			LED_ON();
-//		else
-//			LED_OFF();
+		
 		if(S0())
 			LED_ON();
 		else
 			LED_OFF();
-
-//		if(!S1())
-//			LCD_BL_ON();
-//		else
-//			LCD_BL_OFF();
 
 		if(!S2())
 			BUZZ_ON();
 		else
 			BUZZ_OFF();
 		
-
 		float tmp = 0.0f;
         if(flag_20_ms) {
             flag_20_ms = 0; // 清除标志
             for (int i = 0; i < 3; i++) {
-                short gyro[3];
-                MPU6050ReadGyro(gyro);
-                int16_t gz = gyro[2];
-                //tsp_tft18_show_int16(0, 6, gz);
-                tmp += (gz / 131.0f) ;
+                float gyro[3];
+                Gyro_GetAngularRate(gyro);
+                gz = gyro[2];
+                tsp_tft18_show_int16(0, 6 , gz);
+                tmp += gz / 131.0f;
             }
         }
+        
 		char buf[32];
-        yaw += tmp / 3.0f * 0.020f / 9.5f *90.0f ; // 20 ms, 3 次采样
+        yaw += tmp / 3.0f * 0.02f /12.0f *90.0f  ;
         yaw = normalize_angle(yaw);
-		sprintf(buf, "Yaw:%6.1f", yaw);
+	    sprintf(buf, "Yaw:%6.1f", yaw);
         tsp_tft18_show_str(0, 3, buf);
         sprintf(buf, "Ref:%6.1f", yaw_ref);
         tsp_tft18_show_str(0, 4, buf);
+        tsp_tft18_show_uint16(0, 5, count++);
 	}	
 			  
 }
