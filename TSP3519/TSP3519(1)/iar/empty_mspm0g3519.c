@@ -58,38 +58,38 @@ int main(void)
 	tsp_tft18_show_str_color(0, 0, "NUEDC-2025 SAIS@SJTU", BLUE, YELLOW);
     MPU6050_Init();
     
-	// /* 初始化 yaw_ref */
-    // float yaw = 0.0f;
+	/* 初始化 yaw_ref */
+    float yaw = 0.0f;
     
-	// while (1) {
+	while (1) {
 		
-	// 	if(S0())
-	// 		LED_ON();
-	// 	else
-	// 		LED_OFF();
+		if(S0())
+			LED_ON();
+		else
+			LED_OFF();
 
 
-	// 	if(!S2())
-	// 		BUZZ_ON();
-	// 	else
-	// 		BUZZ_OFF();
+		if(!S2())
+			BUZZ_ON();
+		else
+			BUZZ_OFF();
 		
         
-	// 	float tmp = 0.0f;
-    //     if(flag_20_ms) {
-    //         flag_20_ms = 0; // 清除标志
-    //         for (int i = 0; i < 3; i++) {
-    //             MPU6050_GetData(&AX,&AY,&AZ,&GX,&GY,&GZ);
-    //             int16_t gz = GZ;
-    //             //tsp_tft18_show_int16(0, 6, gz);
-    //             tmp += (gz / 131.0f) ;
-    //         }
-    //     }
-	// 	char buf[32];
-    //     yaw += tmp / 3.0f * 0.020f / 9.5f *90.0f ; // 20 ms, 3 次采样
-    //     yaw = normalize_angle(yaw);
-	// 	sprintf(buf, "Yaw:%6.1f", yaw);
-    //     tsp_tft18_show_str(0, 3, buf);
-	// }	
+		float tmp = 0.0f;
+        if(flag_20_ms) {
+            flag_20_ms = 0; // 清除标志
+            for (int i = 0; i < 3; i++) {
+                MPU6050_GetData(&AX,&AY,&AZ,&GX,&GY,&GZ);
+                int16_t gz = GZ;
+                //tsp_tft18_show_int16(0, 6, gz);
+                tmp += (gz / 131.0f) ;
+            }
+        }
+		char buf[32];
+        yaw += tmp / 3.0f * 0.020f / 9.5f *90.0f ; // 20 ms, 3 次采样
+        yaw = normalize_angle(yaw);
+		sprintf(buf, "Yaw:%6.1f", yaw);
+        tsp_tft18_show_str(0, 3, buf);
+	}	
 			  
 }

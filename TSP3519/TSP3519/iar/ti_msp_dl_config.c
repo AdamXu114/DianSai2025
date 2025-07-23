@@ -42,6 +42,7 @@
 
 DL_TimerG_backupConfig gServoBackup;
 DL_TimerA_backupConfig gMotorBackup;
+DL_TimerG_backupConfig gQEI_2Backup;
 DL_SPI_backupConfig gLCDBackup;
 
 /*
@@ -56,6 +57,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     SYSCFG_DL_SYSCTL_init();
     SYSCFG_DL_Servo_init();
     SYSCFG_DL_Motor_init();
+    SYSCFG_DL_QEI_1_init();
+    SYSCFG_DL_QEI_2_init();
     SYSCFG_DL_MPU6050_init();
     SYSCFG_DL_K230_init();
     SYSCFG_DL_LCD_init();
@@ -63,6 +66,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     /* Ensure backup structures have no valid state */
 	gServoBackup.backupRdy 	= false;
 	gMotorBackup.backupRdy 	= false;
+	gQEI_2Backup.backupRdy 	= false;
 
 	gLCDBackup.backupRdy 	= false;
 
@@ -77,6 +81,7 @@ SYSCONFIG_WEAK bool SYSCFG_DL_saveConfiguration(void)
 
 	retStatus &= DL_TimerG_saveConfiguration(Servo_INST, &gServoBackup);
 	retStatus &= DL_TimerA_saveConfiguration(Motor_INST, &gMotorBackup);
+	retStatus &= DL_TimerG_saveConfiguration(QEI_2_INST, &gQEI_2Backup);
 	retStatus &= DL_SPI_saveConfiguration(LCD_INST, &gLCDBackup);
 
     return retStatus;
@@ -89,6 +94,7 @@ SYSCONFIG_WEAK bool SYSCFG_DL_restoreConfiguration(void)
 
 	retStatus &= DL_TimerG_restoreConfiguration(Servo_INST, &gServoBackup, false);
 	retStatus &= DL_TimerA_restoreConfiguration(Motor_INST, &gMotorBackup, false);
+	retStatus &= DL_TimerG_restoreConfiguration(QEI_2_INST, &gQEI_2Backup, false);
 	retStatus &= DL_SPI_restoreConfiguration(LCD_INST, &gLCDBackup);
 
     return retStatus;
@@ -101,6 +107,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_GPIO_reset(GPIOC);
     DL_TimerG_reset(Servo_INST);
     DL_TimerA_reset(Motor_INST);
+    DL_TimerG_reset(QEI_1_INST);
+    DL_TimerG_reset(QEI_2_INST);
     DL_I2C_reset(MPU6050_INST);
     DL_UART_Main_reset(K230_INST);
     DL_SPI_reset(LCD_INST);
@@ -111,6 +119,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_GPIO_enablePower(GPIOC);
     DL_TimerG_enablePower(Servo_INST);
     DL_TimerA_enablePower(Motor_INST);
+    DL_TimerG_enablePower(QEI_1_INST);
+    DL_TimerG_enablePower(QEI_2_INST);
     DL_I2C_enablePower(MPU6050_INST);
     DL_UART_Main_enablePower(K230_INST);
     DL_SPI_enablePower(LCD_INST);
@@ -138,6 +148,11 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_enableOutput(GPIO_Motor_C2_PORT, GPIO_Motor_C2_PIN);
     DL_GPIO_initPeripheralOutputFunction(GPIO_Motor_C3_IOMUX,GPIO_Motor_C3_IOMUX_FUNC);
     DL_GPIO_enableOutput(GPIO_Motor_C3_PORT, GPIO_Motor_C3_PIN);
+
+    DL_GPIO_initPeripheralInputFunction(GPIO_QEI_1_PHA_IOMUX,GPIO_QEI_1_PHA_IOMUX_FUNC);
+    DL_GPIO_initPeripheralInputFunction(GPIO_QEI_1_PHB_IOMUX,GPIO_QEI_1_PHB_IOMUX_FUNC);
+    DL_GPIO_initPeripheralInputFunction(GPIO_QEI_2_PHA_IOMUX,GPIO_QEI_2_PHA_IOMUX_FUNC);
+    DL_GPIO_initPeripheralInputFunction(GPIO_QEI_2_PHB_IOMUX,GPIO_QEI_2_PHB_IOMUX_FUNC);
 
     DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_MPU6050_IOMUX_SDA,
         GPIO_MPU6050_IOMUX_SDA_FUNC, DL_GPIO_INVERSION_DISABLE,
@@ -245,7 +260,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_setLowerPinsPolarity(PORTC_PORT, DL_GPIO_PIN_8_EDGE_FALL);
     DL_GPIO_clearInterruptStatus(PORTC_PORT, PORTC_MPU6050_INT_PIN);
     DL_GPIO_enableInterrupt(PORTC_PORT, PORTC_MPU6050_INT_PIN);
-    
+
 }
 
 
@@ -283,7 +298,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
     DL_SYSCTL_setMCLKSource(SYSOSC, HSCLK, DL_SYSCTL_HSCLK_SOURCE_SYSPLL);
     /* INT_GROUP1 Priority */
     NVIC_SetPriority(GPIOC_INT_IRQn, 1);
-    NVIC_EnableIRQ(GPIOC_INT_IRQn);
+
 }
 
 
@@ -299,10 +314,10 @@ static const DL_TimerG_ClockConfig gServoClockConfig = {
 };
 
 static const DL_TimerG_PWMConfig gServoConfig = {
-    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN,
+    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN_UP,
     .period = 4000,
     .isTimerWithFourCC = true,
-    .startTimer = DL_TIMER_STOP,
+    .startTimer = DL_TIMER_START,
 };
 
 SYSCONFIG_WEAK void SYSCFG_DL_Servo_init(void) {
@@ -350,10 +365,10 @@ static const DL_TimerA_ClockConfig gMotorClockConfig = {
 };
 
 static const DL_TimerA_PWMConfig gMotorConfig = {
-    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN,
+    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN_UP,
     .period = 4000,
     .isTimerWithFourCC = true,
-    .startTimer = DL_TIMER_STOP,
+    .startTimer = DL_TIMER_START,
 };
 
 SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
@@ -372,28 +387,28 @@ SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
 		DL_TIMERA_CAPTURE_COMPARE_0_INDEX);
 
     DL_TimerA_setCaptCompUpdateMethod(Motor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERA_CAPTURE_COMPARE_0_INDEX);
-    DL_TimerA_setCaptureCompareValue(Motor_INST, 4000, DL_TIMER_CC_0_INDEX);
+    DL_TimerA_setCaptureCompareValue(Motor_INST, 0, DL_TIMER_CC_0_INDEX);
 
     DL_TimerA_setCaptureCompareOutCtl(Motor_INST, DL_TIMER_CC_OCTL_INIT_VAL_LOW,
 		DL_TIMER_CC_OCTL_INV_OUT_DISABLED, DL_TIMER_CC_OCTL_SRC_FUNCVAL,
 		DL_TIMERA_CAPTURE_COMPARE_1_INDEX);
 
     DL_TimerA_setCaptCompUpdateMethod(Motor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERA_CAPTURE_COMPARE_1_INDEX);
-    DL_TimerA_setCaptureCompareValue(Motor_INST, 4000, DL_TIMER_CC_1_INDEX);
+    DL_TimerA_setCaptureCompareValue(Motor_INST, 0, DL_TIMER_CC_1_INDEX);
 
     DL_TimerA_setCaptureCompareOutCtl(Motor_INST, DL_TIMER_CC_OCTL_INIT_VAL_LOW,
 		DL_TIMER_CC_OCTL_INV_OUT_DISABLED, DL_TIMER_CC_OCTL_SRC_FUNCVAL,
 		DL_TIMERA_CAPTURE_COMPARE_2_INDEX);
 
     DL_TimerA_setCaptCompUpdateMethod(Motor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERA_CAPTURE_COMPARE_2_INDEX);
-    DL_TimerA_setCaptureCompareValue(Motor_INST, 4000, DL_TIMER_CC_2_INDEX);
+    DL_TimerA_setCaptureCompareValue(Motor_INST, 0, DL_TIMER_CC_2_INDEX);
 
     DL_TimerA_setCaptureCompareOutCtl(Motor_INST, DL_TIMER_CC_OCTL_INIT_VAL_LOW,
 		DL_TIMER_CC_OCTL_INV_OUT_DISABLED, DL_TIMER_CC_OCTL_SRC_FUNCVAL,
 		DL_TIMERA_CAPTURE_COMPARE_3_INDEX);
 
     DL_TimerA_setCaptCompUpdateMethod(Motor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERA_CAPTURE_COMPARE_3_INDEX);
-    DL_TimerA_setCaptureCompareValue(Motor_INST, 4000, DL_TIMER_CC_3_INDEX);
+    DL_TimerA_setCaptureCompareValue(Motor_INST, 0, DL_TIMER_CC_3_INDEX);
 
     DL_TimerA_enableClock(Motor_INST);
 
@@ -402,6 +417,47 @@ SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
     DL_TimerA_setCCPDirection(Motor_INST , DL_TIMER_CC0_OUTPUT | DL_TIMER_CC1_OUTPUT | DL_TIMER_CC2_OUTPUT | DL_TIMER_CC3_OUTPUT );
 
 
+}
+
+
+static const DL_TimerG_ClockConfig gQEI_1ClockConfig = {
+    .clockSel = DL_TIMER_CLOCK_BUSCLK,
+    .divideRatio = DL_TIMER_CLOCK_DIVIDE_1,
+    .prescale = 0U
+};
+
+
+SYSCONFIG_WEAK void SYSCFG_DL_QEI_1_init(void) {
+
+    DL_TimerG_setClockConfig(
+        QEI_1_INST, (DL_TimerG_ClockConfig *) &gQEI_1ClockConfig);
+
+    DL_TimerG_configQEI(QEI_1_INST, DL_TIMER_QEI_MODE_2_INPUT,
+        DL_TIMER_CC_INPUT_INV_NOINVERT, DL_TIMER_CC_0_INDEX);
+    DL_TimerG_configQEI(QEI_1_INST, DL_TIMER_QEI_MODE_2_INPUT,
+        DL_TIMER_CC_INPUT_INV_NOINVERT, DL_TIMER_CC_1_INDEX);
+    DL_TimerG_setLoadValue(QEI_1_INST, 65535);
+    DL_TimerG_enableClock(QEI_1_INST);
+    DL_TimerG_startCounter(QEI_1_INST);
+}
+static const DL_TimerG_ClockConfig gQEI_2ClockConfig = {
+    .clockSel = DL_TIMER_CLOCK_BUSCLK,
+    .divideRatio = DL_TIMER_CLOCK_DIVIDE_1,
+    .prescale = 0U
+};
+
+
+SYSCONFIG_WEAK void SYSCFG_DL_QEI_2_init(void) {
+
+    DL_TimerG_setClockConfig(
+        QEI_2_INST, (DL_TimerG_ClockConfig *) &gQEI_2ClockConfig);
+
+    DL_TimerG_configQEI(QEI_2_INST, DL_TIMER_QEI_MODE_2_INPUT,
+        DL_TIMER_CC_INPUT_INV_NOINVERT, DL_TIMER_CC_0_INDEX);
+    DL_TimerG_configQEI(QEI_2_INST, DL_TIMER_QEI_MODE_2_INPUT,
+        DL_TIMER_CC_INPUT_INV_NOINVERT, DL_TIMER_CC_1_INDEX);
+    DL_TimerG_setLoadValue(QEI_2_INST, 65535);
+    DL_TimerG_enableClock(QEI_2_INST);
 }
 
 
@@ -429,7 +485,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_MPU6050_init(void) {
 
     /* Enable module */
     DL_I2C_enableController(MPU6050_INST);
-    /* Enable interrupts */
+
 
 }
 

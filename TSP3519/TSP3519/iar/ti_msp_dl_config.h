@@ -138,6 +138,38 @@ extern "C" {
 
 
 
+/* Defines for QEI_1 */
+#define QEI_1_INST                                                         TIMG9
+#define QEI_1_INST_IRQHandler                                   TIMG9_IRQHandler
+#define QEI_1_INST_INT_IRQN                                     (TIMG9_INT_IRQn)
+/* Pin configuration defines for QEI_1 PHA Pin */
+#define GPIO_QEI_1_PHA_PORT                                                GPIOB
+#define GPIO_QEI_1_PHA_PIN                                         DL_GPIO_PIN_7
+#define GPIO_QEI_1_PHA_IOMUX                                     (IOMUX_PINCM24)
+#define GPIO_QEI_1_PHA_IOMUX_FUNC                    IOMUX_PINCM24_PF_TIMG9_CCP0
+/* Pin configuration defines for QEI_1 PHB Pin */
+#define GPIO_QEI_1_PHB_PORT                                                GPIOB
+#define GPIO_QEI_1_PHB_PIN                                         DL_GPIO_PIN_9
+#define GPIO_QEI_1_PHB_IOMUX                                     (IOMUX_PINCM26)
+#define GPIO_QEI_1_PHB_IOMUX_FUNC                    IOMUX_PINCM26_PF_TIMG9_CCP1
+
+/* Defines for QEI_2 */
+#define QEI_2_INST                                                         TIMG8
+#define QEI_2_INST_IRQHandler                                   TIMG8_IRQHandler
+#define QEI_2_INST_INT_IRQN                                     (TIMG8_INT_IRQn)
+/* Pin configuration defines for QEI_2 PHA Pin */
+#define GPIO_QEI_2_PHA_PORT                                                GPIOB
+#define GPIO_QEI_2_PHA_PIN                                        DL_GPIO_PIN_15
+#define GPIO_QEI_2_PHA_IOMUX                                     (IOMUX_PINCM32)
+#define GPIO_QEI_2_PHA_IOMUX_FUNC                    IOMUX_PINCM32_PF_TIMG8_CCP0
+/* Pin configuration defines for QEI_2 PHB Pin */
+#define GPIO_QEI_2_PHB_PORT                                                GPIOB
+#define GPIO_QEI_2_PHB_PIN                                        DL_GPIO_PIN_16
+#define GPIO_QEI_2_PHB_IOMUX                                     (IOMUX_PINCM33)
+#define GPIO_QEI_2_PHB_IOMUX_FUNC                    IOMUX_PINCM33_PF_TIMG8_CCP1
+
+
+
 /* Defines for MPU6050 */
 #define MPU6050_INST                                                        I2C0
 #define MPU6050_INST_IRQHandler                                  I2C0_IRQHandler
@@ -278,6 +310,8 @@ void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
 void SYSCFG_DL_Servo_init(void);
 void SYSCFG_DL_Motor_init(void);
+void SYSCFG_DL_QEI_1_init(void);
+void SYSCFG_DL_QEI_2_init(void);
 void SYSCFG_DL_MPU6050_init(void);
 void SYSCFG_DL_K230_init(void);
 void SYSCFG_DL_LCD_init(void);

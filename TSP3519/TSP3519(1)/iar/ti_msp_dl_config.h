@@ -137,22 +137,6 @@ extern "C" {
 
 
 
-
-/* Defines for MPU6050 */
-#define MPU6050_INST                                                        I2C0
-#define MPU6050_INST_IRQHandler                                  I2C0_IRQHandler
-#define MPU6050_INST_INT_IRQN                                      I2C0_INT_IRQn
-#define MPU6050_BUS_SPEED_HZ                                              400000
-#define GPIO_MPU6050_SDA_PORT                                              GPIOB
-#define GPIO_MPU6050_SDA_PIN                                      DL_GPIO_PIN_22
-#define GPIO_MPU6050_IOMUX_SDA                                   (IOMUX_PINCM50)
-#define GPIO_MPU6050_IOMUX_SDA_FUNC                    IOMUX_PINCM50_PF_I2C0_SDA
-#define GPIO_MPU6050_SCL_PORT                                              GPIOB
-#define GPIO_MPU6050_SCL_PIN                                      DL_GPIO_PIN_21
-#define GPIO_MPU6050_IOMUX_SCL                                   (IOMUX_PINCM49)
-#define GPIO_MPU6050_IOMUX_SCL_FUNC                    IOMUX_PINCM49_PF_I2C0_SCL
-
-
 /* Defines for K230 */
 #define K230_INST                                                          UART6
 #define K230_INST_FREQUENCY                                             80000000
@@ -211,6 +195,12 @@ extern "C" {
 /* Defines for LCD_DC: GPIOB.29 with pinCMx 66 on package pin 30 */
 #define PORTB_LCD_DC_PIN                                        (DL_GPIO_PIN_29)
 #define PORTB_LCD_DC_IOMUX                                       (IOMUX_PINCM66)
+/* Defines for GPIO_SDA: GPIOB.22 with pinCMx 50 on package pin 84 */
+#define PORTB_GPIO_SDA_PIN                                      (DL_GPIO_PIN_22)
+#define PORTB_GPIO_SDA_IOMUX                                     (IOMUX_PINCM50)
+/* Defines for GPIO_SCL: GPIOB.21 with pinCMx 49 on package pin 83 */
+#define PORTB_GPIO_SCL_PIN                                      (DL_GPIO_PIN_21)
+#define PORTB_GPIO_SCL_IOMUX                                     (IOMUX_PINCM49)
 /* Port definition for Pin Group PORTA */
 #define PORTA_PORT                                                       (GPIOA)
 
@@ -278,7 +268,6 @@ void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
 void SYSCFG_DL_Servo_init(void);
 void SYSCFG_DL_Motor_init(void);
-void SYSCFG_DL_MPU6050_init(void);
 void SYSCFG_DL_K230_init(void);
 void SYSCFG_DL_LCD_init(void);
 

@@ -4,15 +4,15 @@
 //打开SDA引脚（输出）
 void SDA_OUT(void)   
 {
-    DL_GPIO_initDigitalOutput(GPIO_MPU6050_IOMUX_SDA);     
-	DL_GPIO_setPins(GPIOC, GPIO_MPU6050_SDA_PIN);	   
-    DL_GPIO_enableOutput(GPIOC, GPIO_MPU6050_SDA_PIN); 
+    DL_GPIO_initDigitalOutput(PORTB_GPIO_SDA_IOMUX);     
+	DL_GPIO_setPins(GPIOC, PORTB_GPIO_SDA_PIN);	   
+    DL_GPIO_enableOutput(GPIOC, PORTB_GPIO_SDA_PIN); 
 }
 //关闭SDA引脚（输入）
 void SDA_IN(void)
 {
  
-    DL_GPIO_initDigitalInputFeatures(GPIO_MPU6050_IOMUX_SDA,
+    DL_GPIO_initDigitalInputFeatures(PORTB_GPIO_SDA_IOMUX,
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_UP,
 		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
  
@@ -35,9 +35,9 @@ void Delay_us(uint16_t us)
 void MyI2C_W_SCL(uint8_t BitValue)
 {
     if(BitValue)
-        DL_GPIO_setPins(GPIOC, GPIO_MPU6050_SCL_PIN);
+        DL_GPIO_setPins(GPIOC, PORTB_GPIO_SCL_PIN);
     else
-        DL_GPIO_clearPins(GPIOC, GPIO_MPU6050_SCL_PIN);
+        DL_GPIO_clearPins(GPIOC, PORTB_GPIO_SCL_PIN);
 	Delay_us(8);	//延时8us，防止时序频率超过要求
 }
  
@@ -51,9 +51,9 @@ void MyI2C_W_SDA(uint8_t BitValue)
 {
     SDA_OUT();
     if(BitValue)
-        DL_GPIO_setPins(GPIOC, GPIO_MPU6050_SDA_PIN);
+        DL_GPIO_setPins(GPIOC, PORTB_GPIO_SDA_PIN);
     else
-        DL_GPIO_clearPins(GPIOC, GPIO_MPU6050_SDA_PIN);
+        DL_GPIO_clearPins(GPIOC, PORTB_GPIO_SDA_PIN);
 	Delay_us(8);					//延时8us，防止时序频率超过要求
 }
  
@@ -68,7 +68,7 @@ uint8_t MyI2C_R_SDA(void)
 	uint8_t b;
     uint32_t BitValue;
     SDA_IN();
-	BitValue = DL_GPIO_readPins(GPIOC, GPIO_MPU6050_SDA_PIN);		//读取SDA电平
+	BitValue = DL_GPIO_readPins(GPIOC, PORTB_GPIO_SDA_PIN);		//读取SDA电平
     {
         if(BitValue)   b=1;
         else           b=0;
@@ -85,10 +85,10 @@ uint8_t MyI2C_R_SDA(void)
   */
 void MyI2C_Init(void)
 {
-    SYSCFG_DL_GPIO_init();
+    //SYSCFG_DL_GPIO_init();
 	/*设置默认电平*/
-	DL_GPIO_setPins(GPIOA, GPIO_MPU6050_SDA_PIN |
-		GPIO_MPU6050_SCL_PIN);//设置PA8和PA9引脚初始化后默认为高电平（释放总线状态）
+	DL_GPIO_setPins(GPIOA, PORTB_GPIO_SDA_PIN |
+		PORTB_GPIO_SCL_PIN);//设置PA8和PA9引脚初始化后默认为高电平（释放总线状态）
 }
  
 /*协议层*/
