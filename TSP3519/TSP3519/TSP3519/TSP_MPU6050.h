@@ -28,7 +28,7 @@
 #define	MPU6050_PWR_MGMT_2		0x6C
 #define	MPU6050_WHO_AM_I		0x75
 
-#define GYRO_SENS       (131.0f)  // ±250°/s 量程时，LSB/°/s
+
 
 
 int MPU6050_WriteReg(uint8_t reg_add, uint8_t reg_dat);
@@ -39,8 +39,5 @@ void MPU6050ReadAcc(short *accData);
 void MPU6050ReadGyro(short *gyroData);
 void MPU6050ReadTemp(short *tempData);
 void MPU6050_ReturnTemp(float* Temperature);
-void Gyro_Calibrate(void);
-void Gyro_GetAngularRate(float *dps);
-float normalize_angle(float a);
 
 #endif /* TSP_MPU6050_H */

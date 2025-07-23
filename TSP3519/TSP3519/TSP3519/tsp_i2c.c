@@ -1,9 +1,9 @@
 #include "ti_msp_dl_config.h"
 #include "tsp_i2c.h"
-#include "tsp_isr.h"
+
 #define I2C_TIMEOUT_MS  (10)
 
-int mspm0_i2c_disable(void)
+static int tsp_i2c_disable(void)
 {
     DL_I2C_reset(MPU6050_INST);
     DL_GPIO_initDigitalOutput(GPIO_MPU6050_IOMUX_SCL);
@@ -15,7 +15,7 @@ int mspm0_i2c_disable(void)
     return 0;
 }
 
-int mspm0_i2c_enable(void)
+static int tsp_i2c_enable(void)
 {
     DL_I2C_reset(MPU6050_INST);
     DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_MPU6050_IOMUX_SDA,
@@ -29,7 +29,7 @@ int mspm0_i2c_enable(void)
     DL_GPIO_enableHiZ(GPIO_MPU6050_IOMUX_SDA);
     DL_GPIO_enableHiZ(GPIO_MPU6050_IOMUX_SCL);
     DL_I2C_enablePower(MPU6050_INST);
-    SYSCFG_DL_MPU6050_init();
+    SYSCFG_DL_I2C_MPU6050_init();
     return 0;
 }
 
