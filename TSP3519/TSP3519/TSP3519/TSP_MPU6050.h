@@ -41,5 +41,6 @@ void MPU6050ReadTemp(short *tempData);
 void MPU6050_ReturnTemp(float* Temperature);
 void Gyro_Calibrate(void);
 void Gyro_GetAngularRate(float *dps);
+float normalize_angle(float a);
 
 #endif /* TSP_MPU6050_H */

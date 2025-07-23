@@ -36,21 +36,34 @@
 #include "tsp_i2c.h"
 #include "TSP_MPU6050.h"
 #include "TSP_TFT18.h"
+#include "tsp_pwm.h"
+uint8_t rx_buffer[128];
+uint16_t rx_idx = 0;
+uint8_t rx_flag = 0;
 
+float kp_motor = 1.0f; // 电机控制的比例系数
+float ki_motor = 0.0f;
+float kd_motor = 0.0f; // 电机控制的微分系数
+float kp_servo = 0.0f; // 舵机控制的比例系数
+float ki_servo = 0.0f;
+float kd_servo = 0.0f; // 舵机控制的微分系数
+
+float kp_turn_motor = 1.0f; // 原地转向电机控制的比例系数
+float ki_turn_motor = 0.0f;
+float kd_turn_motor = 0.0f; // 原地转向电机控制的微分系数
+
+float kp_angle_to_err = 1.0f; // 角度转误差的比例系数
 uint8_t flag_20_ms = 0; // 用于标记 20 ms 周期
 uint32_t dt = 200;
-static float normalize_angle(float a) {
-    while (a > 180.0f)  a -= 360.0f;
-    while (a < -180.0f) a += 360.0f;
-    return a;
-}
+
 int16_t gz = 0; // 陀螺仪 Z 轴数据
 int main(void)
 {
 	uint32_t count=0;
 	
 	SYSCFG_DL_init();
-	
+	DL_TimerG_startCounter(Servo_INST);
+	DL_TimerA_startCounter(Motor_INST);
 	//DL_FlashCTL_executeClearStatus();
 	
 	tsp_tft18_init();
@@ -66,9 +79,9 @@ int main(void)
         const int N0 = 5;
         uint32_t start_time = get_systick_counter();
         for (int i = 0; i < N0; i++) {
-            float gyro[3];
+            short gyro[3];
             
-            Gyro_GetAngularRate(gyro);
+            MPU6050ReadGyro(gyro);
             gz = gyro[2];
             
             uint32_t Current_time = get_systick_counter();

@@ -1,0 +1,513 @@
+###############################################################################
+#
+# IAR ELF Linker V9.60.3.422/W64 for ARM                  23/Jul/2025  14:58:19
+# Copyright 2007-2024 IAR Systems AB.
+#
+#    Output file  =
+#        D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Exe\empty_mspm0g3519_nortos_iar.out
+#    Map file     =
+#        D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\List\empty_mspm0g3519_nortos_iar.map
+#    Command line =
+#        -f
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Exe\empty_mspm0g3519_nortos_iar.out.rsp"
+#        ("D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\empty_mspm0g3519_13168490636323535303.dir\empty_mspm0g3519.o"
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\iar_102420246905159791.dir\startup_mspm0g351x_iar.o"
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\SysConfig
+#        Generated Files_5435349133262493662.dir\ti_msp_dl_config.o"
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\TSP3519_9401757970942732151.dir\tsp_gpio.o"
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\NUEDU2025_11847588325976546582.dir\tsp_isr.o"
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\TSP3519_9401757970942732151.dir\tsp_soft6050.o"
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\TSP3519_9401757970942732151.dir\tsp_soft_i2c.o"
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\TSP3519_9401757970942732151.dir\TSP_TFT18.o"
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --no_out_extension -o
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Exe\empty_mspm0g3519_nortos_iar.out"
+#        --map
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\List\empty_mspm0g3519_nortos_iar.map"
+#        --config
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar/mspm0g3519.icf"
+#        D:\ti\mspm0_sdk_2_05_01_00/source/ti/driverlib/lib/iar/m0p/mspm0gx51x/driverlib.a
+#        --silent --semihosting --entry __iar_program_start --vfe --text_out
+#        locale --cpu=Cortex-M0+ --fpu=None) --dependencies=n
+#        "D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Exe\empty_mspm0g3519_nortos_iar.out.iar_deps"
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, there are calls to deallocation functions in the
+application, and the application appears to be primarily
+optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+define block ALIGNED_ROM with end alignment = 8 { ro };
+"P1":  place in [from 0x0 to 0x7'ffff] { block ALIGNED_ROM };
+define block CSTACK with size = 512, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block TRIM_TABLE with alignment = 8 { rw code section .TrimTable };
+define block HEAP with size = 1K, alignment = 8 { };
+"P2":  place in [from 0x2020'0000 to 0x2020'ffff] {
+          rw, block CSTACK, block PROC_STACK, block TRIM_TABLE, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  rw code section .TrimTable  in block TRIM_TABLE
+  section BCRCONFIG           in "P3"
+  section BSLCONFIG           in "P4"
+  section DataBank            in "P5"
+
+
+  Section              Kind         Address  Alignment    Size  Object
+  -------              ----         -------  ---------    ----  ------
+"A0":                                                     0xc0
+  .intvec              const            0x0          4    0xc0  startup_mspm0g351x_iar.o [5]
+                                     - 0xc0               0xc0
+
+"P1":                                                   0x1c00
+  ALIGNED_ROM                          0xc0             0x1c00  <Block>
+    .rodata            const           0xc0          4    0x28  ti_msp_dl_config.o [2]
+    .rodata            const           0xe8          4    0x36  ti_msp_dl_config.o [2]
+    .text              ro code        0x11e          2     0x2  startup_mspm0g351x_iar.o [5]
+    .rodata            const          0x120          4   0x5f0  TSP_TFT18.o [3]
+    .text              ro code        0x710          4    0x44  empty_mspm0g3519.o [4]
+    .text              ro code        0x754          4    0x40  ti_msp_dl_config.o [2]
+    .text              ro code        0x794          4   0x38c  TSP_TFT18.o [3]
+    .text              ro code        0xb20          2    0x66  tsp_soft6050.o [3]
+    .text              ro code        0xb88          4    0x94  ti_msp_dl_config.o [2]
+    .text              ro code        0xc1c          4   0x228  ti_msp_dl_config.o [2]
+    .text              ro code        0xe44          4    0x48  ti_msp_dl_config.o [2]
+    .text              ro code        0xe8c          4    0x88  ti_msp_dl_config.o [2]
+    .text              ro code        0xf14          4    0xd0  ti_msp_dl_config.o [2]
+    .text              ro code        0xfe4          4    0x50  ti_msp_dl_config.o [2]
+    .text              ro code       0x1034          4    0x44  ti_msp_dl_config.o [2]
+    .text              ro code       0x1078          4    0x3c  ti_msp_dl_config.o [2]
+    .text              ro code       0x10b4          4    0x10  ti_msp_dl_config.o [2]
+    .text              ro code       0x10c4          4    0x94  tsp_isr.o [1]
+    .text              ro code       0x1158          4    0x84  dl_spi.o [7]
+    .text              ro code       0x11dc          4   0x1b2  tsp_soft_i2c.o [3]
+    .text              ro code       0x1390          4   0x360  ti_msp_dl_config.o [2]
+    .text              ro code       0x16f0          4     0xa  dl_common.o [7]
+    .text              ro code       0x16fc          4   0x184  dl_sysctl_mspm0gx51x.o [7]
+    .text              ro code       0x1880          4   0x17c  dl_timer.o [7]
+    .text              ro code       0x19fc          4    0x2a  dl_i2c.o [7]
+    .text              ro code       0x1a28          4    0x60  dl_uart.o [7]
+    .text              ro code       0x1a88          2    0xae  I32DivModFast.o [8]
+    .text              ro code       0x1b38          4    0x58  dl_factoryregion.o [7]
+    .text              ro code       0x1b90          4     0x2  IntDivZer.o [8]
+    .text              ro code       0x1b94          4    0x1c  cstartup_M.o [8]
+    .text              ro code       0x1bb0          4    0x1e  cmain.o [8]
+    .text              ro code       0x1bce          2     0x4  low_level_init.o [6]
+    .text              ro code       0x1bd4          4    0x28  data_init.o [8]
+    .text              ro code       0x1bfc          2     0x8  exit.o [6]
+    .text              ro code       0x1c04          4     0xa  cexit.o [8]
+    .text              ro code       0x1c10          4    0x14  exit.o [9]
+    Initializer bytes  const         0x1c24          4     0x4  <for P2-1>
+    .text              ro code       0x1c28          2     0x8  startup_mspm0g351x_iar.o [5]
+    .text              ro code       0x1c30          2    0x3c  zero_init3.o [8]
+    .text              ro code       0x1c6c          2    0x30  copy_init3.o [8]
+    .iar.init_table    const         0x1c9c          4    0x24  - Linker created -
+    .rodata            const         0x1cc0                0x0  zero_init3.o [8]
+    .rodata            const         0x1cc0                0x0  copy_init3.o [8]
+                                   - 0x1cc0             0x1c00
+
+"P2", part 1 of 3:                                         0x4
+  P2-1                          0x2020'0000          4     0x4  <Init block>
+    .data              inited   0x2020'0000          4     0x4  dl_factoryregion.o [7]
+                              - 0x2020'0004                0x4
+
+"P2", part 2 of 3:                                       0x1d4
+  .bss                 zero     0x2020'0004          4   0x184  ti_msp_dl_config.o [2]
+  .TrimTable           zero     0x2020'0188          4    0x44  dl_factoryregion.o [7]
+  .bss                 zero     0x2020'01cc          4     0x8  tsp_isr.o [1]
+  .bss                 zero     0x2020'01d4                0x1  empty_mspm0g3519.o [4]
+                              - 0x2020'01d5              0x1d1
+
+"P2", part 3 of 3:                                       0x200
+  CSTACK                        0x2020'01d8          8   0x200  <Block>
+    CSTACK             uninit   0x2020'01d8              0x200  <Block tail>
+                              - 0x2020'03d8              0x200
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+       0x1cc0     0x7'ffff  0x7'e340
+  0x2020'03d8  0x2020'ffff    0xfc28
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1d1:
+          0x2020'0004  0x1d1
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+               0x1c24    0x4
+    1 destination range, total size 0x4:
+          0x2020'0000    0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                    ro code  ro data  rw data
+    ------                    -------  -------  -------
+command line/config:
+    ---------------------------------------------------
+    Total:
+
+D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\NUEDU2025_11847588325976546582.dir: [1]
+    tsp_isr.o                     148                 8
+    ---------------------------------------------------
+    Total:                        148                 8
+
+D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\SysConfig Generated Files_5435349133262493662.dir: [2]
+    ti_msp_dl_config.o          2'268       94      388
+    ---------------------------------------------------
+    Total:                      2'268       94      388
+
+D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\TSP3519_9401757970942732151.dir: [3]
+    TSP_TFT18.o                   908    1'520
+    tsp_soft6050.o                102
+    tsp_soft_i2c.o                434
+    ---------------------------------------------------
+    Total:                      1'444    1'520
+
+D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\empty_mspm0g3519_13168490636323535303.dir: [4]
+    empty_mspm0g3519.o             68                 1
+    ---------------------------------------------------
+    Total:                         68                 1
+
+D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\iar_102420246905159791.dir: [5]
+    startup_mspm0g351x_iar.o       10      192
+    ---------------------------------------------------
+    Total:                         10      192
+
+dl6M_tlf.a: [6]
+    exit.o                          8
+    low_level_init.o                4
+    ---------------------------------------------------
+    Total:                         12
+
+driverlib.a: [7]
+    dl_common.o                    10
+    dl_factoryregion.o             88        4       72
+    dl_i2c.o                       42
+    dl_spi.o                      132
+    dl_sysctl_mspm0gx51x.o        388
+    dl_timer.o                    380
+    dl_uart.o                      96
+    ---------------------------------------------------
+    Total:                      1'136        4       72
+
+rt6M_tl.a: [8]
+    I32DivModFast.o               174
+    IntDivZer.o                     2
+    cexit.o                        10
+    cmain.o                        30
+    copy_init3.o                   48
+    cstartup_M.o                   28
+    data_init.o                    40
+    zero_init3.o                   60
+    ---------------------------------------------------
+    Total:                        392
+
+shb_l.a: [9]
+    exit.o                         20
+    ---------------------------------------------------
+    Total:                         20
+
+    Gaps                           16
+    Linker created                          36      512
+-------------------------------------------------------
+    Grand Total:                5'514    1'846      981
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base        0x1c9c          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x1cc0          --   Gb  - Linker created -
+?main                        0x1bb1         Code  Gb  cmain.o [8]
+ADC0_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+ADC1_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+AESADV_IRQHandler             0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+ALIGNED_ROM$$Base              0xc0          --   Gb  - Linker created -
+ALIGNED_ROM$$Limit           0x1cc0          --   Gb  - Linker created -
+CANFD0_IRQHandler             0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+CANFD1_IRQHandler             0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+CSTACK$$Base            0x2020'01d8          --   Gb  - Linker created -
+CSTACK$$Limit           0x2020'03d8          --   Gb  - Linker created -
+DAC0_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+DL_Common_delayCycles        0x16f1    0xa  Code  Gb  dl_common.o [7]
+DL_Common_updateReg          0x1403    0xc  Code  Lc  ti_msp_dl_config.o [2]
+DL_FACTORYREGION_TrimTable
+                        0x2020'0188   0x44  Data  Gb  dl_factoryregion.o [7]
+DL_FactoryRegion_initTrimTable
+                             0x1b39   0x58  Code  Gb  dl_factoryregion.o [7]
+DL_GPIO_clearInterruptStatus
+                             0x1505    0xc  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_clearInterruptStatus
+                             0x10c5    0xc  Code  Lc  tsp_isr.o [1]
+DL_GPIO_clearPins            0x14cd    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_clearPins            0x1215    0x8  Code  Lc  tsp_soft_i2c.o [3]
+DL_GPIO_clearPins             0x79b    0x8  Code  Lc  TSP_TFT18.o [3]
+DL_GPIO_enableHiZ            0x14e7   0x12  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_enableInterrupt
+                             0x14f9    0xc  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_enableOutput         0x14d5    0x6  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_enableOutput         0x121d    0x6  Code  Lc  tsp_soft_i2c.o [3]
+DL_GPIO_enablePower          0x144f    0xa  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_initDigitalInputFeatures
+                             0x146d   0x1a  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_initDigitalInputFeatures
+                             0x11e9   0x1a  Code  Lc  tsp_soft_i2c.o [3]
+DL_GPIO_initDigitalOutput
+                             0x1461    0xc  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_initDigitalOutput
+                             0x11dd    0xc  Code  Lc  tsp_soft_i2c.o [3]
+DL_GPIO_initPeripheralAnalogFunction
+                             0x14c1    0xc  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_initPeripheralInputFunction
+                             0x1495    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_initPeripheralInputFunctionFeatures
+                             0x14a3   0x1e  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_initPeripheralOutputFunction
+                             0x1487    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_readPins             0x1203    0xc  Code  Lc  tsp_soft_i2c.o [3]
+DL_GPIO_reset                0x1459    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_setLowerPinsPolarity
+                             0x14db    0xc  Code  Lc  ti_msp_dl_config.o [2]
+DL_GPIO_setPins              0x120f    0x6  Code  Lc  tsp_soft_i2c.o [3]
+DL_GPIO_setPins               0x795    0x6  Code  Lc  TSP_TFT18.o [3]
+DL_I2C_enableAnalogGlitchFilter
+                             0x153d   0x12  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_enableController
+                             0x1555    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_enableControllerClockStretching
+                             0x1563    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_enablePower           0x1519    0xa  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_reset                 0x1523    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_resetControllerTransfer
+                             0x1511    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_setAnalogGlitchFilterPulseWidth
+                             0x152b   0x12  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_setClockConfig        0x19fd   0x2a  Code  Gb  dl_i2c.o [7]
+DL_I2C_setControllerRXFIFOThreshold
+                             0x157f   0x10  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_setControllerTXFIFOThreshold
+                             0x1571    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_I2C_setTimerPeriod        0x154f    0x6  Code  Lc  ti_msp_dl_config.o [2]
+DL_Interrupt_getPendingGroup
+                             0x10d1   0x12  Code  Lc  tsp_isr.o [1]
+DL_SPI_enable                0x15a1    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_SPI_enablePower           0x158f    0xa  Code  Lc  ti_msp_dl_config.o [2]
+DL_SPI_init                  0x1159   0x44  Code  Gb  dl_spi.o [7]
+DL_SPI_receiveDataBlocking8
+                             0x11ad   0x10  Code  Gb  dl_spi.o [7]
+DL_SPI_reset                 0x1599    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_SPI_setBitRateSerialClockDivider
+                             0x15c3    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_SPI_setClockConfig        0x119d   0x10  Code  Gb  dl_spi.o [7]
+DL_SPI_setFIFOThreshold
+                             0x15af   0x14  Code  Lc  ti_msp_dl_config.o [2]
+DL_SPI_transmitDataBlocking8
+                             0x11bd    0xe  Code  Gb  dl_spi.o [7]
+DL_SYSCTL_configSYSPLL       0x16fd   0xc2  Code  Gb  dl_sysctl_mspm0gx51x.o [7]
+DL_SYSCTL_enableMFCLK        0x1431    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_SYSCTL_setBORThreshold
+                             0x140f    0x6  Code  Lc  ti_msp_dl_config.o [2]
+DL_SYSCTL_setFlashWaitState
+                             0x143f   0x10  Code  Lc  ti_msp_dl_config.o [2]
+DL_SYSCTL_setHFCLKSourceHFXTParams
+                             0x17ed   0x68  Code  Gb  dl_sysctl_mspm0gx51x.o [7]
+DL_SYSCTL_setSYSOSCFreq
+                             0x1415    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_SYSCTL_setULPCLKDivider
+                             0x1423    0xe  Code  Lc  ti_msp_dl_config.o [2]
+DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK
+                             0x17bf   0x24  Code  Gb  dl_sysctl_mspm0gx51x.o [7]
+DL_Timer_enableClock         0x15eb    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_Timer_enablePower         0x15d1    0xa  Code  Lc  ti_msp_dl_config.o [2]
+DL_Timer_initFourCCPWMMode
+                             0x18e5   0xf6  Code  Gb  dl_timer.o [7]
+DL_Timer_reset               0x15db    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_Timer_setCCPDirection
+                             0x15e3    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_Timer_setCaptCompUpdateMethod
+                             0x18a7   0x1a  Code  Gb  dl_timer.o [7]
+DL_Timer_setCaptureCompareOutCtl
+                             0x18c1   0x14  Code  Gb  dl_timer.o [7]
+DL_Timer_setCaptureCompareValue
+                             0x189d    0xa  Code  Gb  dl_timer.o [7]
+DL_Timer_setClockConfig
+                             0x1881   0x16  Code  Gb  dl_timer.o [7]
+DL_Timer_setCounterControl
+                             0x15f3   0x16  Code  Lc  ti_msp_dl_config.o [2]
+DL_UART_enable               0x1621   0x10  Code  Lc  ti_msp_dl_config.o [2]
+DL_UART_enableInterrupt
+                             0x1673    0xc  Code  Lc  ti_msp_dl_config.o [2]
+DL_UART_enablePower          0x1609    0xa  Code  Lc  ti_msp_dl_config.o [2]
+DL_UART_init                 0x1a29   0x48  Code  Gb  dl_uart.o [7]
+DL_UART_reset                0x1613    0x8  Code  Lc  ti_msp_dl_config.o [2]
+DL_UART_setBaudRateDivisor
+                             0x1643   0x30  Code  Lc  ti_msp_dl_config.o [2]
+DL_UART_setClockConfig       0x1a71   0x10  Code  Gb  dl_uart.o [7]
+DL_UART_setOversampling
+                             0x1631   0x12  Code  Lc  ti_msp_dl_config.o [2]
+DMA_IRQHandler                0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+Default_Handler               0x11f    0x2  Code  Lc  startup_mspm0g351x_iar.o [5]
+Delay_us                     0x1259   0x16  Code  Gb  tsp_soft_i2c.o [3]
+FACTORYVALUE            0x2020'0000    0x4  Data  Gb  dl_factoryregion.o [7]
+GROUP0_IRQHandler             0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+GROUP1_IRQHandler            0x1119   0x24  Code  Gb  tsp_isr.o [1]
+HardFault_Handler             0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+I2C0_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+I2C1_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+I2C2_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+LFSS_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+MPU6050_Init                  0xb4f   0x38  Code  Gb  tsp_soft6050.o [3]
+MPU6050_WriteReg              0xb21   0x2e  Code  Gb  tsp_soft6050.o [3]
+MyI2C_Init                   0x12d5   0x12  Code  Gb  tsp_soft_i2c.o [3]
+MyI2C_R_SDA                  0x12b3   0x22  Code  Gb  tsp_soft_i2c.o [3]
+MyI2C_ReceiveAck             0x1369   0x26  Code  Gb  tsp_soft_i2c.o [3]
+MyI2C_SendByte               0x133b   0x2e  Code  Gb  tsp_soft_i2c.o [3]
+MyI2C_Start                  0x1301   0x20  Code  Gb  tsp_soft_i2c.o [3]
+MyI2C_Stop                   0x1321   0x1a  Code  Gb  tsp_soft_i2c.o [3]
+MyI2C_W_SCL                  0x126f   0x20  Code  Gb  tsp_soft_i2c.o [3]
+MyI2C_W_SDA                  0x128f   0x24  Code  Gb  tsp_soft_i2c.o [3]
+NMI_Handler                   0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+PendSV_Handler                0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+Region$$Table$$Base          0x1c9c          --   Gb  - Linker created -
+Region$$Table$$Limit         0x1cc0          --   Gb  - Linker created -
+Reset_Handler                0x1c29    0x8  Code  Wk  startup_mspm0g351x_iar.o [5]
+SDA_IN                       0x1243   0x16  Code  Gb  tsp_soft_i2c.o [3]
+SDA_OUT                      0x1223   0x20  Code  Gb  tsp_soft_i2c.o [3]
+SPI0_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+SPI1_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+SPI2_IRQHandler               0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+SVC_Handler                   0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+SYSCFG_DL_GPIO_init           0xc1d  0x228  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_K230_init          0x1035   0x44  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_LCD_init           0x1079   0x3c  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_MPU6050_init        0xfe5   0x50  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_Motor_init          0xf15   0xd0  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_SYSCTL_init         0xe45   0x48  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_SYSTICK_init       0x10b5   0x10  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_Servo_init          0xe8d   0x88  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_init                0x755   0x40  Code  Wk  ti_msp_dl_config.o [2]
+SYSCFG_DL_initPower           0xb89   0x94  Code  Wk  ti_msp_dl_config.o [2]
+SysTick_Config               0x13d5   0x2e  Code  Lc  ti_msp_dl_config.o [2]
+SysTick_Handler              0x10ef   0x2a  Code  Gb  tsp_isr.o [1]
+TIMA0_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMA1_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMG0_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMG12_IRQHandler             0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMG14_IRQHandler             0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMG6_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMG7_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMG8_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+TIMG9_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+UART0_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+UART1_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+UART3_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+UART4_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+UART5_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+UART6_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+UART7_IRQHandler              0x11f    0x2  Code  Wk  startup_mspm0g351x_iar.o [5]
+__NVIC_SetPriority           0x1391   0x44  Code  Lc  ti_msp_dl_config.o [2]
+__aeabi_idiv0                0x1b91         Code  Gb  IntDivZer.o [8]
+__aeabi_uidiv                0x1a89         Code  Gb  I32DivModFast.o [8]
+__aeabi_uidivmod             0x1a89         Code  Gb  I32DivModFast.o [8]
+__cmain                      0x1bb1         Code  Gb  cmain.o [8]
+__exit                       0x1c11   0x14  Code  Gb  exit.o [9]
+__iar_copy_init3             0x1c6d   0x30  Code  Gb  copy_init3.o [8]
+__iar_data_init3             0x1bd5   0x28  Code  Gb  data_init.o [8]
+__iar_program_start          0x1b95         Code  Gb  cstartup_M.o [8]
+__iar_zero_init3             0x1c31   0x3c  Code  Gb  zero_init3.o [8]
+__low_level_init             0x1bcf    0x4  Code  Gb  low_level_init.o [6]
+__vector_table                  0x0   0xc0  Data  Gb  startup_mspm0g351x_iar.o [5]
+_call_main                   0x1bbd         Code  Gb  cmain.o [8]
+_exit                        0x1c05         Code  Gb  cexit.o [8]
+delay                   0x2020'01d0    0x4  Data  Lc  tsp_isr.o [1]
+delay_1ms                    0x10e3    0xc  Code  Gb  tsp_isr.o [1]
+exit                         0x1bfd    0x8  Code  Gb  exit.o [6]
+flag_20_ms              0x2020'01d4    0x1  Data  Gb  empty_mspm0g3519.o [4]
+gK230ClockConfig              0x102    0x2  Data  Lc  ti_msp_dl_config.o [2]
+gK230Config                   0x104    0xc  Data  Lc  ti_msp_dl_config.o [2]
+gLCDBackup              0x2020'0160   0x28  Data  Gb  ti_msp_dl_config.o [2]
+gLCD_clockConfig              0x11c    0x2  Data  Lc  ti_msp_dl_config.o [2]
+gLCD_config                   0x110    0xc  Data  Lc  ti_msp_dl_config.o [2]
+gMPU6050ClockConfig           0x100    0x2  Data  Lc  ti_msp_dl_config.o [2]
+gMotorBackup            0x2020'0004   0xbc  Data  Gb  ti_msp_dl_config.o [2]
+gMotorClockConfig              0xf4    0x4  Data  Lc  ti_msp_dl_config.o [2]
+gMotorConfig                   0xf8    0x8  Data  Lc  ti_msp_dl_config.o [2]
+gSYSPLLConfig                  0xc0   0x28  Data  Lc  ti_msp_dl_config.o [2]
+gServoBackup            0x2020'00c0   0xa0  Data  Gb  ti_msp_dl_config.o [2]
+gServoClockConfig              0xe8    0x4  Data  Lc  ti_msp_dl_config.o [2]
+gServoConfig                   0xec    0x8  Data  Lc  ti_msp_dl_config.o [2]
+main                          0x711   0x26  Code  Gb  empty_mspm0g3519.o [4]
+sys_tick_counter        0x2020'01cc    0x4  Data  Gb  tsp_isr.o [1]
+tft_ascii                     0x120  0x5f0  Data  Gb  TSP_TFT18.o [3]
+tsp_spi_write_byte            0x8a9   0x14  Code  Lc  TSP_TFT18.o [3]
+tsp_tft18_clear               0x93f   0x36  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_init                0x7a3  0x106  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_set_region          0x909   0x36  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_show_char           0x9d1   0x5a  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_show_char_color
+                              0xa2b   0x72  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_show_str            0xab9   0x28  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_show_str_color
+                              0xae1   0x40  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_test_color          0x975   0x5c  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_write_2byte         0x8e9   0x20  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_write_byte          0x8d3   0x16  Code  Gb  TSP_TFT18.o [3]
+tsp_tft18_write_cmd           0x8bd   0x16  Code  Gb  TSP_TFT18.o [3]
+
+
+[1] = D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\NUEDU2025_11847588325976546582.dir
+[2] = D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\SysConfig Generated Files_5435349133262493662.dir
+[3] = D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\TSP3519_9401757970942732151.dir
+[4] = D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\empty_mspm0g3519_13168490636323535303.dir
+[5] = D:\Study_resources\电赛\main\main\TSP3519\TSP3519(1)\iar\Debug\Obj\iar_102420246905159791.dir
+[6] = dl6M_tlf.a
+[7] = driverlib.a
+[8] = rt6M_tl.a
+[9] = shb_l.a
+
+  5'514 bytes of readonly  code memory
+  1'846 bytes of readonly  data memory
+    981 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

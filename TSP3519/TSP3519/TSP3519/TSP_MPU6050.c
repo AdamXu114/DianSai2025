@@ -18,7 +18,7 @@ uint8_t MPU6050_ReadReg(uint8_t reg_addr) {
 
 // 从MPU6050寄存器读取数据
 int MPU6050_ReadData(uint8_t reg_add, uint8_t* Read, uint8_t num)
-{
+{   
     return mspm0_i2c_read(MPU6050_ADDRESS >> 1, reg_add, num, Read);
 }
 
@@ -38,7 +38,7 @@ uint8_t MPU6050ReadID(void)
 
 void MPU6050_Init(void)
 {
-    mpu6050_i2c_enable();    // I2C硬件初始化
+    mspm0_i2c_enable();    // I2C硬件初始化
     delay_1ms(100);
     /*MPU6050寄存器初始化，需要对照MPU6050手册的寄存器描述配置，此处仅配置了部分重要的寄存器*/
     MPU6050_WriteReg(MPU6050_PWR_MGMT_1, 0x01);        //电源管理寄存器1，取消睡眠模式，选择时钟源为X轴陀螺仪
@@ -97,4 +97,10 @@ void Gyro_GetAngularRate(float *dps) {
     // sprintf(str, "Gyro Z: %6.1f\n", dps[2]);
     // //tsp_tft18_show_str(0, 6, str);
     // tsp_tft18_show_str(0, 5, "NO");
+}
+
+float normalize_angle(float a) {
+    while (a > 180.0f)  a -= 360.0f;
+    while (a < -180.0f) a += 360.0f;
+    return a;
 }
