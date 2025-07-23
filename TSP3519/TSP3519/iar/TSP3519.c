@@ -110,7 +110,9 @@ int main(void)
             flag_20_ms = 0; // 清除标志
             for (int i = 0; i < 3; i++) {
                 short gyro[3];
+                short acc[3];
                 MPU6050ReadGyro(gyro);
+                MPU6050ReadAcc(acc);
                 gz = gyro[2];
                 tsp_tft18_show_int16(0, 6 , gz);
                 tmp += gz / 131.0f;
@@ -120,10 +122,10 @@ int main(void)
 		char buf[32];
         yaw += tmp / 3.0f * 0.02f /12.0f *90.0f  ;
         //yaw = normalize_angle(yaw);
-	    sprintf(buf, "Yaw:%6.1f", yaw);
-        tsp_tft18_show_str(0, 3, buf);
-        sprintf(buf, "Ref:%6.1f", yaw_ref);
-        tsp_tft18_show_str(0, 4, buf);
+	    // sprintf(buf, "Yaw:%6.1f", yaw);
+        // tsp_tft18_show_str(0, 3, buf);
+        // sprintf(buf, "Ref:%6.1f", yaw_ref);
+        // tsp_tft18_show_str(0, 4, buf);
         tsp_tft18_show_uint16(0, 5, count++);
 	}	
 			  
