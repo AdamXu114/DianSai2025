@@ -3,7 +3,7 @@
 
 #define I2C_TIMEOUT_MS  (10)
 
-static int tsp_i2c_disable(void)
+int mspm0_i2c_disable(void)
 {
     DL_I2C_reset(MPU6050_INST);
     DL_GPIO_initDigitalOutput(GPIO_MPU6050_IOMUX_SCL);
@@ -15,7 +15,7 @@ static int tsp_i2c_disable(void)
     return 0;
 }
 
-static int tsp_i2c_enable(void)
+int mspm0_i2c_enable(void)
 {
     DL_I2C_reset(MPU6050_INST);
     DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_MPU6050_IOMUX_SDA,
@@ -29,11 +29,11 @@ static int tsp_i2c_enable(void)
     DL_GPIO_enableHiZ(GPIO_MPU6050_IOMUX_SDA);
     DL_GPIO_enableHiZ(GPIO_MPU6050_IOMUX_SCL);
     DL_I2C_enablePower(MPU6050_INST);
-    SYSCFG_DL_I2C_MPU6050_init();
+    SYSCFG_DL_MPU6050_init();
     return 0;
 }
 
-void mpu6050_i2c_sda_unlock(void)
+void mspm0_i2c_sda_unlock(void)
 {
     uint8_t cycleCnt = 0;
     mspm0_i2c_disable();
@@ -80,7 +80,7 @@ int mspm0_i2c_write(unsigned char slave_addr,
         mspm0_get_clock_ms(&cur);
         if(cur >= (start + I2C_TIMEOUT_MS))
         {
-            mpu6050_i2c_sda_unlock();
+            mspm0_i2c_sda_unlock();
             return -1;
         }
     } while (!DL_I2C_getRawInterruptStatus(MPU6050_INST, DL_I2C_INTERRUPT_CONTROLLER_TX_DONE));
@@ -124,7 +124,7 @@ int mspm0_i2c_read(unsigned char slave_addr,
         mspm0_get_clock_ms(&cur);
         if(cur >= (start + I2C_TIMEOUT_MS))
         {
-            mpu6050_i2c_sda_unlock();
+            mspm0_i2c_sda_unlock();
             return -1;
         }
     } while(!DL_I2C_getRawInterruptStatus(MPU6050_INST, DL_I2C_INTERRUPT_CONTROLLER_RX_DONE));

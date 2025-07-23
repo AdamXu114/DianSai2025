@@ -32,12 +32,12 @@
 
 
 int MPU6050_WriteReg(uint8_t reg_add, uint8_t reg_dat);
+uint8_t MPU6050_ReadReg(uint8_t RegAddress);
 int MPU6050_ReadData(uint8_t reg_add, uint8_t* Read, uint8_t num);
 uint8_t MPU6050ReadID(void);
 void MPU6050_Init(void);
 void MPU6050ReadAcc(short *accData);
 void MPU6050ReadGyro(short *gyroData);
-void MPU6050ReadTemp(short *tempData);
-void MPU6050_ReturnTemp(float* Temperature);
+
 
 #endif /* TSP_MPU6050_H */

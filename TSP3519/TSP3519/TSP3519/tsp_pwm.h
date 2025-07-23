@@ -41,6 +41,6 @@ void tsp_motor_voltage(uint8_t dir, uint16_t duty_cycle);
 void tsp_motor_stop(void);
 void tsp_motor_turn_inplace(uint8_t dir, uint16_t duty_cycle, uint16_t angle);
 void tsp_motor_speed_pid(uint16_t target_speed_pid, uint8_t motor);
-void tsp_line_follower(int8_t err);
+void tsp_line_follower(float err);
 
 #endif // TSP_PWM_H

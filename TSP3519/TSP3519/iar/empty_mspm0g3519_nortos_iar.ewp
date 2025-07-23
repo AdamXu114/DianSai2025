@@ -1126,9 +1126,6 @@
             </file>
         </group>
         <file>
-            <name>$PROJ_DIR$\empty_mspm0g3519.c</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\empty_mspm0g3519.syscfg</name>
         </file>
         <file>
@@ -1136,6 +1133,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\README.md</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\TSP3519.c</name>
         </file>
     </group>
     <group>
@@ -1186,10 +1186,25 @@
             <name>$PROJ_DIR$\..\TSP3519\TSP_MPU6050.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\TSP3519\tsp_pwm.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\TSP3519\tsp_pwm.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\TSP3519\tsp_qei.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\TSP3519\tsp_qei.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\TSP3519\TSP_TFT18.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\TSP3519\TSP_TFT18.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\TSP3519\tsp_uart.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\TSP3519\tsp_uart.h</name>

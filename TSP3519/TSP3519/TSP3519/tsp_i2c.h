@@ -3,9 +3,9 @@
 #include "tsp_gpio.h"
 #include "ti_msp_dl_config.h"
 
-static int tsp_i2c_disable(void);
-static int tsp_i2c_enable(void);
-void mpu6050_i2c_sda_unlock(void);
+int mspm0_i2c_disable(void);
+int mspm0_i2c_enable(void);
+void mspm0_i2c_sda_unlock(void);
 int mspm0_i2c_write(unsigned char slave_addr,
                      unsigned char reg_addr,
                      unsigned char length,
